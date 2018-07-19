@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+
+  <html lang="en" class="">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Blackbaud SKY API Developer Portal | Gift Changelog</title>
+      <link rel="icon" href="/img/favicon.ico" type="image/ico">
+
+      
+        <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.16.0-4/css/sky-bundle.css">
+<link rel="stylesheet" href="/css/app.css">
+      
+      
+
+      
+        <link rel="stylesheet" href="/assets/css/custom.css">
+      
+        <link rel="stylesheet" href="/assets/css/entity-reference.css">
+      
+
+      
+
+
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2418840-1', 'auto');
+  ga('send', 'pageview');
+</script>
+      
+
+    </head>
+    <body data-base="/" class="bb-omnibar-height-padding ">
+
+      
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W56QP9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W56QP9');</script>
+      
+
+      <div id="top"></div>
+
+      
+        
+
+          <div id="ng-stache" ng-controller="NavController"  class="bb-navbar">
+            <bb-navbar>
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <ul class="nav navbar-nav navbar-left">
+  <li>
+    <a href="https://developer.sky.blackbaud.com/">
+      Home
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/docs/getting-started/" class="dropdown-toggle">
+      Documentation
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="/docs/getting-started/">Getting Started</a>
+      </li>
+<li>
+        <a href="/docs/createapp/">Create an App</a>
+      </li>
+      <li>
+        <a href="/docs/authorization/">Authorization</a>
+      </li>
+      <li>
+        <a href="/docs/basics/">Basics</a>
+      </li>
+      <li>
+       <a href="/docs/code/">Code Samples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/docs/services/" class="dropdown-toggle">
+      API
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://developer.sky.blackbaud.com/docs/services/">Endpoint Reference</a>
+      </li>
+      <li>
+        <a href="/api/entity-reference/">Entity Reference</a>
+      </li>
+      <li>
+        <a href="https://developer.sky.blackbaud.com/products/">Products</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/developer/" class="dropdown-toggle">
+      Developer Account
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://developer.sky.blackbaud.com/developer/">My Profile</a>
+      </li>
+      <li>
+        <a href="https://developer.blackbaud.com/apps">My Applications</a>
+      </li>
+      <li>
+        <a href="https://developer.sky.blackbaud.com/developer/analytics/">Analytics</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="/support/changelog/" class="dropdown-toggle">
+      Support
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+       <li>
+        <a href="https://community.blackbaud.com/developer">Community</a>
+      </li>
+      <li>
+        <a href="/support/changelog/">Changelog</a>
+      </li>
+       <li>
+        <a href="/support/issues/">Issues</a>
+      </li>
+      <li>
+        <a href="/support/ideas/">Ideas</a>
+      </li>
+      <li>
+        <a href="/support/faq/">FAQ</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="https://skyapi.statuspage.io">Status</a>
+  </li>
+</ul>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+            </bb-navbar>
+          </div>
+
+        
+      
+
+      
+
+      
+      
+
+      
+        
+          
+
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        
+          
+
+<div class="row">
+  <div class="col-sm-3 content-secondary">
+    <div class="sidebar">
+      <ul class="nav nav-stacked nav-sidebar"><li class=""><a href="/support/community/">Community</a></li><li class="current active"><a href="/support/changelog/">Changelog</a><ul class="nav"><li class=""><a href="/support/changelog/shared/">Shared</a></li><li class=""><a href="/support/changelog/ap/">Accounts Payable</a></li><li class=""><a href="/support/changelog/constituent/">Constituent</a></li><li class=""><a href="/support/changelog/fundraising/">Fundraising</a></li><li class=""><a href="/support/changelog/gl/">General Ledger</a></li><li class="current active"><a href="/support/changelog/gift/">Gift</a><div class="headings"><ul class="nav"><li class="heading"><a href="#2018-07-11" class="smooth-scroll">2018-07-11</a></li><li class="heading"><a href="#june" class="smooth-scroll">June</a></li><li class="heading"><a href="#may" class="smooth-scroll">May</a></li><li class="heading"><a href="#january" class="smooth-scroll">January</a></li><li class="heading"><a href="#2017" class="smooth-scroll">2017</a></li></ul></div></li><li class=""><a href="/support/changelog/opportunity/">Opportunity</a></li><li class=""><a href="/support/changelog/treasury/">Treasury</a></li></ul></li><li class=""><a href="/support/issues/">Issues</a></li><li class=""><a href="/support/ideas/">Ideas</a></li><li class=""><a href="/support/faq/">FAQ</a></li><li class="visible-on-affix"><a href="#top" class="smooth-scroll"></a></li></ul>
+    </div>
+  </div>
+  <div class="col-sm-9 content-primary">
+    
+      
+<!-- STACHE MARKED -->
+<h1 id="gift">Gift</h1>
+<p>Monitor this page to keep up with the <a href="https://developer.sky.blackbaud.com/docs/services/58bdd5edd7dcde06046081d6/">Gift API</a> latest changes and SKY API service releases.</p>
+<h2 id="2018-07-11">2018-07-11</h2>
+<h3 id="announcement-changes-for-gift-https-developer-sky-blackbaud-com-docs-services-58bdd5edd7dcde06046081d6-api">Announcement: Changes for <a href="https://developer.sky.blackbaud.com/docs/services/58bdd5edd7dcde06046081d6/">Gift</a> API</h3>
+<p>We will transition the <a href="https://developer.sky.blackbaud.com/docs/services/58bdd5edd7dcde06046081d6/">Gift (Beta)</a> API out of its current public beta phase and into a formal v1 release.</p>
+<h2 id="june">June</h2>
+<h3 id="2018-06-05">2018-06-05</h3>
+<h4 id="announcement-changes-for-gift-https-developer-sky-blackbaud-com-docs-services-58bdd5edd7dcde06046081d6-api">Announcement: Changes for <a href="https://developer.sky.blackbaud.com/docs/services/58bdd5edd7dcde06046081d6/">Gift</a> API</h4>
+<p>We implemented new operation ID values in the OpenApi (fka Swagger) definitions for all endpoints in the Gift API. Note that any existing code relying on these endpoints will continue to function, since all routes and parameters are unchanged. However, if you make use of client-side generated code and want to regenerate your client wrapper, compile-time errors in your code stemming from new operation ID values will arise and need to be addressed.</p>
+<h4 id="new">New</h4>
+<p>Added the following endpoint:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+       <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/58bdd5edd7dcde06046081d6/operations/CreateDocument/">
+        <td>Document (Create)</td>
+        <td>POST</td>
+        <td>/documents</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<h4 id="changed">Changed</h4>
+<p>We added the <code>id</code> property to the <a href="/api/entity-reference/gift#GiftSplit">gift split</a> entity.</p>
+<h2 id="may">May</h2>
+<h3 id="2018-05-25">2018-05-25</h3>
+<h3 id="announcement-changes-planned-for-constituent-https-developer-sky-blackbaud-com-docs-services-56b76470069a0509c8f1c5b3-fundraising-https-developer-sky-blackbaud-com-docs-services-58bdd6c8d7dcde06046081d7-gift-https-developer-sky-blackbaud-com-docs-services-58bdd5edd7dcde06046081d6-and-opportunity-https-developer-sky-blackbaud-com-docs-services-58e3b2597c1af25c58b9c4e3-apis">Announcement: Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/56b76470069a0509c8f1c5b3/">Constituent</a>, <a href="https://developer.sky.blackbaud.com/docs/services/58bdd6c8d7dcde06046081d7/">Fundraising</a>, <a href="https://developer.sky.blackbaud.com/docs/services/58bdd5edd7dcde06046081d6/">Gift</a>, and <a href="https://developer.sky.blackbaud.com/docs/services/58e3b2597c1af25c58b9c4e3/">Opportunity</a> APIs</h3>
+<p>We will implement new operation ID values in the OpenApi (fka Swagger) definitions for several SKY APIs. This change will improve client-side tooling support for code generation by making these values more deterministic and friendlier across different languages. Going forward, we expect high stability of these values (meaning, we won&#x2019;t need to change them again).</p>
+<p>Note that any existing code that has been deployed will continue to function with no problems, since we are not changing any routes or parameters. If you make use of client-side generated code and want to regenerate your client wrapper, you&#x2019;ll need to fix any compile-time errors in your code stemming from new method names.</p>
+<h2 id="january">January</h2>
+<h3 id="2018-01-29">2018-01-29</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoint:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/58bdd5edd7dcde06046081d6/operations/ListAttachmentTags/">
+        <td>Attachment tags</td>
+        <td>GET</td>
+        <td>/attachmenttags</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<p>We added the <code>date</code> property to the <a href="/api/entity-reference/gift#Attachment">attachment</a> entity.</p>
+<h2 id="2017">2017</h2>
+<h3 id="2017-12-11">2017-12-11</h3>
+<h4 id="changed">Changed</h4>
+<p>We added the <code>package_id</code> property to the <a href="/api/entity-reference/gift#GiftSplit">gift split</a> entity.</p>
+<h3 id="2017-12-01">2017-12-01</h3>
+<h4 id="changed">Changed</h4>
+<ul>
+<li><p>The <a href="https://developer.sky.blackbaud.com/docs/services/58bdd5edd7dcde06046081d6/operations/ListGifts/">Gift list endpoint</a> now includes an option to filter gifts based on their post statuses. The optional <code>post_status</code> query parameter, which can be specified multiple times to imply a logical OR, filters the results to only include gifts with the specified post statuses. For example, <code>post_status=DoNotPost&amp;post_status=Posted</code> filters the results to only include gifts that are marked either DoNotPost or Posted.</p>
+</li>
+<li><p>The <a href="https://developer.sky.blackbaud.com/docs/services/58bdd5edd7dcde06046081d6/operations/ListGifts/">Gift list endpoint</a> now includes an option to filter gifts based on their gift types. The optional <code>gift_type</code> query parameter, which can be specified multiple times to imply a logical OR, filters the results to only include gifts with the specified gift types. For example, <code>gift_type=MatchingGiftPledge&amp;gift_type=RecurringGift</code> filters the results to only include gifts with the MatchingGiftPledge or RecurringGift types.</p>
+</li>
+</ul>
+<h3 id="2017-11-01">2017-11-01</h3>
+<h4 id="changed">Changed</h4>
+<p>We added the <code>batch_number</code> property to the <a href="/api/entity-reference/gift#Gift">gift</a> entity.  This property is read-only.</p>
+<h3 id="2017-10-27">2017-10-27</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoint:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/58bdd5edd7dcde06046081d6/operations/CreateGift/">
+        <td>Gift (Create)</td>
+        <td>POST</td>
+        <td>/gifts</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<p>The <a href="https://developer.sky.blackbaud.com/docs/services/58bdd5edd7dcde06046081d6/operations/ListGifts/">Gift list endpoint</a> now includes an option to filter gifts based on their associated constituents. The optional <code>constituent_id</code> query parameter, which can be specified multiple times to imply a logical OR, filters the results to only include gifts associated with the specified constituent record IDs. For example, <code>&amp;constituent_id=1242&amp;constituent_id=385</code> filters the results to only include gifts associated with two constituent records: &quot;1242&quot; and &quot;385.&quot;</p>
+<h3 id="2017-10-04">2017-10-04</h3>
+<h4 id="changed">Changed</h4>
+<p>We added the <code>acknowledgements</code>, <code>receipts</code>, and <code>balance</code> properties to the <a href="/api/entity-reference/gift#Gift">gift</a> entity.</p>
+<h3 id="2017-09-07">2017-09-07</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoint:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/58bdd5edd7dcde06046081d6/operations/ListGiftCustomFieldsAllGifts/">
+        <td>Gift custom field list (All gifts)</td>
+        <td>GET</td>
+        <td>/gifts/customfields</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<p>The <code>date</code> property on the <a href="/api/entity-reference/gift#Gift">gift</a> entity no longer returns an offset. Instead, it now uses <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><span class="code">2015-09-18T00:00:00</span>.</p>
+<h3 id="2017-08-30">2017-08-30</h3>
+<h4 id="announcement-breaking-changes-planned-for-gift-api-https-developer-sky-blackbaud-com-docs-services-58bdd5edd7dcde06046081d6-">Announcement: Breaking Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/58bdd5edd7dcde06046081d6/">Gift API</a></h4>
+<p>We will update the <code>date</code> property on the <a href="/api/entity-reference/gift#Gift">gift</a> entity to no longer return an offset. Instead, it will use <a href="https://tools.ietf.org/html/rfc3339">ISO-8601 format: </a><span class="code">2015-09-18T00:00:00</span>.</p>
+<h3 id="2017-08-08">2017-08-08</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoint:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/58bdd5edd7dcde06046081d6/operations/ListGiftSubtypes/">
+        <td>Gift subtypes (Get)</td>
+        <td>GET</td>
+        <td>/giftsubtypes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<p>We added the <code>payments</code> property to the <a href="/api/entity-reference/gift#Gift">gift</a> entity.</p>
+<h3 id="2017-08-04">2017-08-04</h3>
+<h4 id="changed">Changed</h4>
+<p>We updated the <code>next_link</code> property on the <a href="https://developer.sky.blackbaud.com/docs/services/58bdd5edd7dcde06046081d6/operations/ListGifts/">Gift list endpoint</a> to be more consistent with other lists.</p>
+<h3 id="2017-06-23">2017-06-23</h3>
+<h4 id="changed">Changed</h4>
+<p>We added the <code>gift_aid_amount</code> and <code>gift_aid_qualification_status</code> properties to the <a href="/api/entity-reference/gift#Gift">gift</a> entity for UK tenants.</p>
+<h3 id="2017-04-25">2017-04-25</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/58bdd5edd7dcde06046081d6/operations/CreateGiftCustomField">
+        <td>Gift custom field (Create)</td>
+        <td>POST</td>
+        <td>/gifts/customfields</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/58bdd5edd7dcde06046081d6/operations/EditGiftCustomField">
+        <td>Gift custom field (Edit)</td>
+        <td>PATCH</td>
+        <td>/gifts/customfields/{custom_field_id}</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/58bdd5edd7dcde06046081d6/operations/ListGiftCustomFieldCategories">
+        <td>Gift custom field categories (Get)</td>
+        <td>GET</td>
+        <td>/gifts/customfields/categories</td>
+      </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/58bdd5edd7dcde06046081d6/operations/ListGiftCustomFieldCategoryValues">
+        <td>Gift custom field category values (Get)</td>
+        <td>GET</td>
+        <td>/gifts/customfields/values</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="2017-03-20">2017-03-20</h3>
+<h4 id="changed">Changed</h4>
+<p>We added the <code>post_date</code> property to the <a href="/api/entity-reference/gift#Gift">gift</a> entity.</p>
+<h3 id="2017-03-08">2017-03-08</h3>
+<h4 id="new">New</h4>
+<p>The Gift API has been released for a public beta. This API handles information related to gifts, including related entities such as gift splits, gift fundraisers, and soft credits.</p>
+<p>The initial release contains endpoints to retrieve a list of all gifts, to retrieve gifts by their IDs, and to manage attachments. For more information, check out the <a href="/api/entity-reference/gift">entity</a> and <a href="https://developer.sky.blackbaud.com/docs/services/58bdd5edd7dcde06046081d6/">endpoint</a> references.</p>
+
+    
+  </div>
+</div>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+      
+
+      
+
+      
+        <div class="back-to-top" data-offset="220">
+  <i class="fa fa-angle-double-up"></i>
+</div>
+      
+
+      <div class="affix-stop">
+        
+
+        
+          
+
+            <div class="footer-site">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-6 col-sm-4">
+                    <h3>
+  <a href="https://developer.sky.blackbaud.com/">
+    SKY API
+  </a>
+</h3>
+                    <ul class="nav navbar-nav navbar-left">
+  <li>
+    <a href="https://developer.sky.blackbaud.com/">
+      Home
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/docs/getting-started/">
+      Documentation
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/docs/services/">
+      API
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/developer/">
+      Developer Account
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/support/changelog/">
+      Support
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="terms">
+    <a href="https://developer.sky.blackbaud.com/terms">
+      API Terms of Use
+    </a>
+  </li>
+</ul>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-sm-push-4">
+                    <ul class="list-inline social-icons">
+  <li>
+    <a href="http://twitter.com/blackbaud" target="_blank">
+      <i class="fa fa-twitter"></i>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.facebook.com/blackbaud" target="_blank">
+      <i class="fa fa-facebook"></i>
+    </a>
+  </li>
+  <li>
+    <a href="http://www.youtube.com/user/blackbaudinc" target="_blank">
+      <i class="fa fa-youtube"></i>
+    </a>
+  </li>
+</ul>
+                  </div>
+                  <div class="clearfix visible-xs-block"></div>
+                  <div class="col-sm-4 col-sm-pull-4">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          
+        
+
+        
+          
+            <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p>&copy; 2016 Blackbaud, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</div>
+          
+        
+      </div>
+
+      
+        <bb-omnibar></bb-omnibar>
+<bb-omnibar-search-results></bb-omnibar-search-results>
+      
+
+      
+        <script src="https://sky.blackbaudcdn.net/skyux/1.16.0-4/js/sky-bundle.min.js"></script>
+      
+
+      
+
+      <script src="/js/stache.min.js"></script>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+
+      
+        
+          <script src="/assets/js/scrollreveal.js"></script>
+        
+      
+        
+          <script src="/assets/js/custom.js"></script>
+        
+      
+        
+          <script src="/assets/js/angular-local-storage.min.js"></script>
+        
+      
+        
+          <script src="/assets/js/entity-reference/app.1.2.js"></script>
+        
+      
+
+      
+
+      
+
+      
+        
+          <script>
+            !function(e,a){"use strict";function n(){var e={};try{e.omnibar={enableHelp:!1,enableSearch:!0,serviceName:"SKY API",serviceNameLink:"https://developer.sky.blackbaud.com/",enableServiceNameLink:!0,url:"https://signin.blackbaud.com/omnibar.min.js",urlDev:"https://signin.blackbaud.com/omnibar.min.js",delegationUri:"https://developer.sky.blackbaud.com/signin/"},e.omnibarSearch={resultsBaseUri:"",resourceUrl:"/content.json",resultsTemplateUri:"/assets/vendor/bb-omnibar-search/templates/bb-omnibar-search.hbs",searchFormClass:"searchenabled",searchFormClassDev:"bb-omnibar-searchenabled",searchInputId:"omnibar_searchbox",searchResultsId:"bb-omnibar-search-results"}}catch(e){}return e}function r(e,a){e.$on("bbBeginWait",function(e,n){e.stopPropagation(),a.beginPageWait(n)}),e.$on("bbEndWait",function(e,n){e.stopPropagation(),a.endPageWait(n)})}r.$inject=["$rootScope","bbWait"],a.module("stache").constant("stacheConfig",n.call()).run(r),a.element(document).ready(function(){a.bootstrap(document,["stache"])})}(window,window.angular);
+          </script>
+        
+      
+
+      
+
+    </body>
+  </html>
+

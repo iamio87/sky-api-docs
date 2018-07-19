@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+
+  <html lang="en" class="">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Blackbaud SKY API Developer Portal | Accounts Payable Changelog</title>
+      <link rel="icon" href="/img/favicon.ico" type="image/ico">
+
+      
+        <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.16.0-4/css/sky-bundle.css">
+<link rel="stylesheet" href="/css/app.css">
+      
+      
+
+      
+        <link rel="stylesheet" href="/assets/css/custom.css">
+      
+        <link rel="stylesheet" href="/assets/css/entity-reference.css">
+      
+
+      
+
+
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2418840-1', 'auto');
+  ga('send', 'pageview');
+</script>
+      
+
+    </head>
+    <body data-base="/" class="bb-omnibar-height-padding ">
+
+      
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W56QP9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W56QP9');</script>
+      
+
+      <div id="top"></div>
+
+      
+        
+
+          <div id="ng-stache" ng-controller="NavController"  class="bb-navbar">
+            <bb-navbar>
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <ul class="nav navbar-nav navbar-left">
+  <li>
+    <a href="https://developer.sky.blackbaud.com/">
+      Home
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/docs/getting-started/" class="dropdown-toggle">
+      Documentation
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="/docs/getting-started/">Getting Started</a>
+      </li>
+<li>
+        <a href="/docs/createapp/">Create an App</a>
+      </li>
+      <li>
+        <a href="/docs/authorization/">Authorization</a>
+      </li>
+      <li>
+        <a href="/docs/basics/">Basics</a>
+      </li>
+      <li>
+       <a href="/docs/code/">Code Samples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/docs/services/" class="dropdown-toggle">
+      API
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://developer.sky.blackbaud.com/docs/services/">Endpoint Reference</a>
+      </li>
+      <li>
+        <a href="/api/entity-reference/">Entity Reference</a>
+      </li>
+      <li>
+        <a href="https://developer.sky.blackbaud.com/products/">Products</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/developer/" class="dropdown-toggle">
+      Developer Account
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://developer.sky.blackbaud.com/developer/">My Profile</a>
+      </li>
+      <li>
+        <a href="https://developer.blackbaud.com/apps">My Applications</a>
+      </li>
+      <li>
+        <a href="https://developer.sky.blackbaud.com/developer/analytics/">Analytics</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="/support/changelog/" class="dropdown-toggle">
+      Support
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+       <li>
+        <a href="https://community.blackbaud.com/developer">Community</a>
+      </li>
+      <li>
+        <a href="/support/changelog/">Changelog</a>
+      </li>
+       <li>
+        <a href="/support/issues/">Issues</a>
+      </li>
+      <li>
+        <a href="/support/ideas/">Ideas</a>
+      </li>
+      <li>
+        <a href="/support/faq/">FAQ</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="https://skyapi.statuspage.io">Status</a>
+  </li>
+</ul>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+            </bb-navbar>
+          </div>
+
+        
+      
+
+      
+
+      
+      
+
+      
+        
+          
+
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        
+          
+
+<div class="row">
+  <div class="col-sm-3 content-secondary">
+    <div class="sidebar">
+      <ul class="nav nav-stacked nav-sidebar"><li class=""><a href="/support/community/">Community</a></li><li class="current active"><a href="/support/changelog/">Changelog</a><ul class="nav"><li class=""><a href="/support/changelog/shared/">Shared</a></li><li class="current active"><a href="/support/changelog/ap/">Accounts Payable</a><div class="headings"><ul class="nav"><li class="heading"><a href="#2018-07-19" class="smooth-scroll">2018-07-19</a></li><li class="heading"><a href="#june" class="smooth-scroll">June</a></li><li class="heading"><a href="#april" class="smooth-scroll">April</a></li><li class="heading"><a href="#march" class="smooth-scroll">March</a></li><li class="heading"><a href="#january" class="smooth-scroll">January</a></li><li class="heading"><a href="#2017" class="smooth-scroll">2017</a></li><li class="heading"><a href="#2016" class="smooth-scroll">2016</a></li></ul></div></li><li class=""><a href="/support/changelog/constituent/">Constituent</a></li><li class=""><a href="/support/changelog/fundraising/">Fundraising</a></li><li class=""><a href="/support/changelog/gl/">General Ledger</a></li><li class=""><a href="/support/changelog/gift/">Gift</a></li><li class=""><a href="/support/changelog/opportunity/">Opportunity</a></li><li class=""><a href="/support/changelog/treasury/">Treasury</a></li></ul></li><li class=""><a href="/support/issues/">Issues</a></li><li class=""><a href="/support/ideas/">Ideas</a></li><li class=""><a href="/support/faq/">FAQ</a></li><li class="visible-on-affix"><a href="#top" class="smooth-scroll"></a></li></ul>
+    </div>
+  </div>
+  <div class="col-sm-9 content-primary">
+    
+      
+<!-- STACHE MARKED -->
+<h1 id="accounts-payable">Accounts Payable</h1>
+<p>Monitor this page to keep up with the <a href="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/">Accounts Payable API</a> latest changes and SKY API service releases.</p>
+<h2 id="2018-07-19">2018-07-19</h2>
+<h3 id="new">New</h3>
+<p>Added the following endpoint:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/CreateVendorAttachment/">
+                <td>Vendor attachment</td>
+                <td>POST</td>
+                <td>/vendors/attachments</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>The Vendor attachment endpoint supports physical attachments and link attachments. Note the shape of the request in JSON form:</p>
+<pre class="language-javascript"><code>
+{
+  &quot;parent_id&quot;: 0,
+  &quot;name&quot;: &quot;string&quot;,
+  &quot;url&quot;: &quot;string&quot;,
+  &quot;type&quot;: &quot;Link&quot;,
+  &quot;media_type&quot;: &quot;string&quot;,
+  &quot;file&quot;: {
+    &quot;ContentLength&quot;: 0,
+    &quot;ContentType&quot;: &quot;string&quot;,
+    &quot;FileName&quot;: &quot;string&quot;,
+    &quot;InputStream&quot;: {
+      &quot;CanRead&quot;: true,
+      &quot;CanSeek&quot;: true,
+      &quot;CanTimeout&quot;: true,
+      &quot;CanWrite&quot;: true,
+      &quot;Length&quot;: 0,
+      &quot;Position&quot;: 0,
+      &quot;ReadTimeout&quot;: 0,
+      &quot;WriteTimeout&quot;: 0
+      }
+  }
+}
+</code></pre>
+
+<ul>
+<li>The <code>type</code> field accepts <code>Physical</code> or <code>Link</code> but defaults to <code>Link</code>.</li>
+<li>The <code>url</code> field is required for link attachments but not for physical attachments.</li>
+<li><a href="https://msdn.microsoft.com/en-us/library/system.web.httppostedfilebase(v=vs.110).aspx">The <code>file</code> field is <code>HttpPostedFileBase</code></a>. It is required for physical attachments but not for link attachments.</li>
+<li>For physical attachments, requests must be <code>multipart/form-data</code>. For example:</li>
+</ul>
+<pre class="language-javascript"><code>
+public static Task<httpresponsemessage> PostMultiPartDataFormAsync(this HttpClient client, string route, Attachment content)
+        {
+            var httpContent = new MultipartFormDataContent();
+            var streamContent = new StreamContent(content.File.InputStream);
+            var ContentDisposition = new ContentDispositionHeaderValue(&quot;form-data&quot;);
+            ContentDisposition.Name = &quot;File&quot;;
+            ContentDisposition.FileName = content.File.FileName;
+            streamContent.Headers.ContentDisposition = ContentDisposition;
+            streamContent.Headers.ContentType = new MediaTypeHeaderValue(content.File.ContentType);
+            httpContent.Add(streamContent);
+            httpContent.Add(new StringContent(content.ParentId.ToString()), &quot;ParentId&quot;);
+            httpContent.Add(new StringContent(content.Name), &quot;Name&quot;);
+            httpContent.Add(new StringContent(content.Type.ToString()), &quot;Type&quot;);
+            httpContent.Add(new StringContent(content.MediaType.ToString()), &quot;MediaType&quot;);
+
+            var request = new HttpRequestMessage(HttpMethod.Post, route)
+            {
+                Content = httpContent
+            };
+            return SendAsync(client, request);
+        }
+</httpresponsemessage></code></pre>
+
+<ul>
+<li>In <code>application/json</code> requests, field names must use snake casing such as <code>parent_id</code> and <code>media_type</code>, whereas in <code>multipart/form-data</code> requests, field names must use camel case, such as <code>ParentId</code> and <code>MediaType</code>.</li>
+<li>Link attachments should be sent as <code>application/json</code> formatted requests with the <code>file</code> field omitted.</li>
+<li>If the <code>file</code> field is populated in <code>application/json</code> formatted requests, the request fails unless <code>type</code> is set to <code>Link</code> because then the request ignores the file.</li>
+</ul>
+<h2 id="june">June</h2>
+<h3 id="2018-06-28">2018-06-28</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoint:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/ListTransactionCodes/">
+                <td>Transaction code (List)</td>
+                <td>GET</td>
+                <td>/transactioncodes</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/ListTransactionCodeValuesSingleTransactionCode/">
+                <td>Transaction code value (List)</td>
+                <td>GET</td>
+                <td>/transactioncodes/{transaction_code_id}/value</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>These endpoints currently exist in the General Ledger API. We decided to include them in the Accounts Payable API (and Treasury API) because values from those endpoints may be required to create Accounts Payable (or Treasury) records.</p>
+<h3 id="2018-06-12">2018-06-12</h3>
+<h4 id="announcement-changes-for-accounts-payable-https-developer-sky-blackbaud-com-docs-services-57a342f1d7dcde1c28a749fe-api">Announcement: Changes for <a href="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/">Accounts Payable</a> API</h4>
+<p>We implemented new operation ID values in the OpenApi (fka Swagger) definitions for all endpoints in the Accounts Payable API. Note that any existing code relying on these endpoints will continue to function, since all routes and parameters are unchanged. However, if you make use of client-side generated code and want to regenerate your client wrapper, compile-time errors in your code stemming from new operation ID values will arise and need to be addressed.</p>
+<h3 id="2018-06-04">2018-06-04</h3>
+<h4 id="announcement-changes-planned-for-accounts-payable-https-developer-sky-blackbaud-com-docs-services-57a342f1d7dcde1c28a749fe-general-ledger-https-developer-sky-blackbaud-com-docs-services-56eb17a0a9db9516c46bff6f-and-treasury-beta-https-developer-sky-blackbaud-com-docs-services-58e3b2880528ab71c796492e-apis">Announcement: Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/">Accounts Payable</a>, <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/">General Ledger</a>, and <a href="https://developer.sky.blackbaud.com/docs/services/58e3b2880528ab71c796492e/">Treasury (Beta)</a> APIs</h4>
+<p>We will implement new operation ID values in the OpenApi (fka Swagger) definitions for several SKY APIs. This change will improve client-side tooling support for code generation by making these values more deterministic and friendlier across different languages. Going forward, we expect high stability of these values (meaning, we won&#x2019;t need to change them again).</p>
+<p>Note that any existing code that has been deployed will continue to function with no problems, since we are not changing any routes or parameters. If you make use of client-side generated code and want to regenerate your client wrapper, you&#x2019;ll need to fix any compile-time errors in your code stemming from new method names.</p>
+<h3 id="2018-06-01">2018-06-01</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoint:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/EditInvoice/">
+                <td>Invoice edit</td>
+                <td>PATCH</td>
+                <td>/invoices/{invoice_id}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>With the new endpoint, note the following:</p>
+<ul>
+<li>You can edit the following properties of an existing invoice:<ul>
+<li><code>vendor_id</code></li>
+<li><code>vendor_name</code></li>
+<li><code>invoice_number</code></li>
+<li><code>invoice_date</code></li>
+<li><code>due_date</code></li>
+<li><code>description</code></li>
+<li><code>status</code></li>
+<li><code>invoice_payment_details</code></li>
+<li><code>post_status</code></li>
+<li><code>post_date</code></li>
+<li><code>distribution_discounts</code></li>
+<li><code>distributions</code></li>
+<li><code>custom_fields</code></li>
+</ul>
+</li>
+<li>You cannot edit <code>Posted</code> or <code>Paid</code> invoices.</li>
+<li>You cannot update an invoice to change the status to <code>Posted</code>, <code>Paid</code>, or <code>Partially Paid</code>.</li>
+<li>If you omit fields from PATCH requests, the endpoint does not edit them with default values. For example, the following code sample only edits the <code>description</code> property.<pre class="language-javascript"><code>{
+      &#x201C;description&#x201D;: &quot;edited description&quot;
+}
+</code></pre>
+
+</li>
+</ul>
+<h2 id="april">April</h2>
+<h3 id="2018-04-20">2018-04-20</h3>
+<h4 id="changed">Changed</h4>
+<p>We made several changes to the  <a href="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/CreateInvoiceAttachment/">Invoice attachment</a> endpoint:</p>
+<ul>
+<li>The endpoint now supports Physical attachments (previously only supported Link attachments)</li>
+<li><p>Note the shape of the request in JSON form:</p>
+<pre class="language-javascript"><code>
+{
+&quot;parent_id&quot;: 0,
+&quot;name&quot;: &quot;string&quot;,
+&quot;url&quot;: &quot;string&quot;,
+&quot;type&quot;: &quot;Link&quot;,
+&quot;media_type&quot;: &quot;string&quot;,
+&quot;file&quot;: {
+  &quot;ContentLength&quot;: 0,
+  &quot;ContentType&quot;: &quot;string&quot;,
+  &quot;FileName&quot;: &quot;string&quot;,
+  &quot;InputStream&quot;: {
+    &quot;CanRead&quot;: true,
+    &quot;CanSeek&quot;: true,
+    &quot;CanTimeout&quot;: true,
+    &quot;CanWrite&quot;: true,
+    &quot;Length&quot;: 0,
+    &quot;Position&quot;: 0,
+    &quot;ReadTimeout&quot;: 0,
+    &quot;WriteTimeout&quot;: 0
+    }
+ }
+}
+</code></pre>
+
+<ul>
+<li>The <code>type</code> field now accepts <code>Physical</code> (defaults to <code>Link</code> if not provided)</li>
+<li>A <code>url</code> is not required for <code>Physical</code> attachments</li>
+<li>A <code>file</code> must be provided for <code>Physical</code> attachments</li>
+<li>A <code>url</code> must be provided for <code>Link</code> attachments</li>
+<li>The new <code>file</code> field is <code>HttpPostedFileBase</code></li>
+</ul>
+</li>
+<li><p>The request must be a multipart/form-data request. For example,</p>
+</li>
+</ul>
+<pre class="language-javascript"><code>
+public static Task<httpresponsemessage> PostMultiPartDataFormAsync(this HttpClient client, string route, Attachment content)
+        {
+            var httpContent = new MultipartFormDataContent();
+            var streamContent = new StreamContent(content.File.InputStream);
+            var ContentDisposition = new ContentDispositionHeaderValue(&quot;form-data&quot;);
+            ContentDisposition.Name = &quot;File&quot;;
+            ContentDisposition.FileName = content.File.FileName;
+            streamContent.Headers.ContentDisposition = ContentDisposition;
+            streamContent.Headers.ContentType = new MediaTypeHeaderValue(content.File.ContentType);
+            httpContent.Add(streamContent);
+            httpContent.Add(new StringContent(content.ParentId.ToString()), &quot;ParentId&quot;);
+            httpContent.Add(new StringContent(content.Name), &quot;Name&quot;);
+            httpContent.Add(new StringContent(content.Type.ToString()), &quot;Type&quot;);
+            httpContent.Add(new StringContent(content.MediaType.ToString()), &quot;MediaType&quot;);
+
+            var request = new HttpRequestMessage(HttpMethod.Post, route)
+            {
+                Content = httpContent
+            };
+            return SendAsync(client, request);
+        }
+
+</httpresponsemessage></code></pre>
+
+<ul>
+<li>JSON requests for url attachments will work the same as they did prior to this release</li>
+<li>JSON requests containing files will fail or ignore the file if  <code>type</code> is set to <code>link</code></li>
+<li>JSON request field names need to use snake casing, such as <code>parent_id</code> and <code>media_type</code> whereas multipart/form-data requests need to use camel case, such as <code>ParentId</code> and <code>MediaType</code></li>
+</ul>
+<h2 id="march">March</h2>
+<h3 id="2018-03-30">2018-03-30</h3>
+<h4 id="changed">Changed</h4>
+<p>For the  <a href="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/ListInvoices/">Invoice (List)</a> endpoint, we made the following changes:</p>
+<ul>
+<li>The <code>payment_method</code> of the invoice is now returned in the listed objects, which includes <code>EFT</code>,  <code>Credit card</code>,  <code>Bank draft</code>, or <code>Check</code>.</li>
+<li>The <code>payment_method</code> field can also be filtered during search.</li>
+</ul>
+<h2 id="january">January</h2>
+<h3 id="2018-01-17">2018-01-17</h3>
+<h4 id="changed">Changed</h4>
+<p>For the  <a href="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/ListInvoices/">Invoice (List)</a> endpoint, we added the <code>delete</code>, <code>paid</code>, and <code>partially paid</code> statuses.</p>
+<h2 id="2017">2017</h2>
+<h3 id="2017-11-17">2017-11-17</h3>
+<h4 id="changed">Changed</h4>
+<p>Added additional fields to the following endpoint:</p>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Operation</th>
+        <th>Method</th>
+        <th>Route</th>
+      </tr>
+    </thead>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/ListPaymentTerms/">
+        <td>Payment term (list)</td>
+        <td>GET</td>
+        <td>/paymentterms</td>
+      </tr>
+    
+  </table>
+</div>
+
+<h3 id="2017-10-12">2017-10-12</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoint:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/ListPaymentTerms/">
+                <td>Payment term (list)</td>
+                <td>GET</td>
+                <td>/paymentterms</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="2017-09-28">2017-09-28</h3>
+<h4 id="changed">Changed</h4>
+<p>For the following endpoint, we added the payment_default field which includes credit limit, payment terms, and bank account information:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/GetVendor/">
+                <td>Vendors</td>
+                <td>GET</td>
+                <td>/vendors</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="2017-06-30">2017-06-30</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/CreateInvoiceAttachment/">
+                <td>Invoice attachment</td>
+                <td>POST</td>
+                <td>/invoices/attachments</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/ListAccountsPayableMediaTypes/">
+                <td>Media type (List)</td>
+                <td>GET</td>
+                <td>/mediatypes</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="2017-05-05">2017-05-05</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/GetInvoice1099Amount/">
+                <td>Invoice 1099 amount</td>
+                <td>GET</td>
+                <td>/invoices/{invoice_id}/1099amount</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/ListInvoice1099BoxNumbers/">
+                <td>Invoice 1099 box numbers</td>
+                <td>GET</td>
+                <td>/invoices/{invoice_id}/1099boxnumber</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2 id="2016">2016</h2>
+<h3 id="2016-12-06">2016-12-06</h3>
+<h4 id="new">New</h4>
+<ul>
+<li>Added the following endpoints:</li>
+</ul>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/ListInvoiceCustomFields/">
+                <td>Invoice custom field (List)</td>
+                <td>GET</td>
+                <td>/invoices/customfields</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/ListVendorCustomFields/">
+                <td>Vendor custom field (List)</td>
+                <td>GET</td>
+                <td>/vendors/customfields</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<ul>
+<li>Added new custom field entities to the following endpoints:</li>
+</ul>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/CreateInvoice/">
+                <td>Invoice</td>
+                <td>POST</td>
+                <td>/invoices</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/GetInvoice/">
+                <td>Invoice</td>
+                <td>GET</td>
+                <td>/invoices/{invoice_id}</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/CreateVendor/">
+                <td>Vendor</td>
+                <td>POST</td>
+                <td>/vendors</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/GetVendor/">
+                <td>Vendor</td>
+                <td>GET</td>
+                <td>/vendors/{vendor_id}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<p>For consistency across APIs, all responses to GET endpoints that return collections now return an object with &quot;count&quot; and &quot;value&quot; properties. The following endpoints are affected:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/ListVendorAddressesSingleVendor/">
+                <td>Address (List)</td>
+                <td>GET</td>
+                <td>/vendors/{vendor_id}/addresses</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/ListContactMethodsSingleVendorAddress/">
+                <td>Contact method (List)</td>
+                <td>GET</td>
+                <td>/vendors/{vendor_id}/addresses/{address_id}/contactmethods</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/ListVendorNotes/">
+                <td>Note (List)</td>
+                <td>GET</td>
+                <td>/vendors/{vendor_id}/notes</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h3 id="2016-11-14">2016-11-14</h3>
+<h4 id="announcement-breaking-changes-planned-for-accounts-payable-api-https-developer-sky-blackbaud-com-docs-services-57a342f1d7dcde1c28a749fe-">Announcement: Breaking Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/">Accounts Payable API</a></h4>
+<p>For consistency across APIs, we will implement the following change:</p>
+<p>All responses to GET endpoints that return collections will return an object with &quot;count&quot; and &quot;value&quot; properties. The following endpoints are affected:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/ListVendorAddressesSingleVendor/">
+                <td>Address (List)</td>
+                <td>GET</td>
+                <td>/vendors/{vendor_id}/addresses</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/ListContactMethodsSingleVendorAddress/">
+                <td>Contact method (List)</td>
+                <td>GET</td>
+                <td>/vendors/{vendor_id}/addresses/{address_id}/contactmethods</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/ListVendorNotes/">
+                <td>Note (List)</td>
+                <td>GET</td>
+                <td>/vendors/{vendor_id}/notes</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h3 id="2016-10-12">2016-10-12</h3>
+<h4 id="changed">Changed</h4>
+<p>For consistency across APIs, we implemented the following changes:</p>
+<ul>
+<li>All responses to POST requests changed from &quot;RecordId&quot; to &quot;record_id&quot;.</li>
+<li>The following endpoints and their associated fields changed from CamelCase to snake_case:</li>
+</ul>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/GetInvoice/">
+                <td>Invoice</td>
+                <td>GET</td>
+                <td>/invoice</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/CreateInvoice/">
+                <td>Invoice</td>
+                <td>POST</td>
+                <td>/invoice</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="2016-10-04">2016-10-04</h3>
+<h4 id="announcement-breaking-changes-planned-for-accounts-payable-api-https-developer-sky-blackbaud-com-docs-services-57a342f1d7dcde1c28a749fe-">Announcement: Breaking Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/">Accounts Payable API</a></h4>
+<p>For consistency across APIs, we will implement the following changes:</p>
+<ul>
+<li>All responses to POST requests will change from &quot;RecordId&quot; to &quot;record_id&quot;.</li>
+<li>The following endpoints and their associated fields will change from CamelCase to snake_case:</li>
+</ul>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/GetInvoice/">
+                <td>Invoice</td>
+                <td>GET</td>
+                <td>/invoice</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/CreateInvoice/">
+                <td>Invoice</td>
+                <td>POST</td>
+                <td>/invoice</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h3 id="2016-08-12">2016-08-12</h3>
+<h4 id="breaking-change">Breaking Change</h4>
+<p>We changed the default and maximum record limits on the following search and list endpoints. The default is now 100 records, and the maximum is 500 records.</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/ListVendors/">
+                <td>Vendor (List)</td>
+                <td>GET</td>
+                <td>/vendors</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/operations/ListInvoices/">
+                <td>Invoice (List)</td>
+                <td>GET</td>
+                <td>/invoices</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="2016-08-04">2016-08-04</h3>
+<h4 id="new">New</h4>
+<p>The <a href="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/">Accounts Payable API</a> is now available. Use this API to manage accounts payable, including vendors and invoices.</p>
+
+    
+  </div>
+</div>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+      
+
+      
+
+      
+        <div class="back-to-top" data-offset="220">
+  <i class="fa fa-angle-double-up"></i>
+</div>
+      
+
+      <div class="affix-stop">
+        
+
+        
+          
+
+            <div class="footer-site">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-6 col-sm-4">
+                    <h3>
+  <a href="https://developer.sky.blackbaud.com/">
+    SKY API
+  </a>
+</h3>
+                    <ul class="nav navbar-nav navbar-left">
+  <li>
+    <a href="https://developer.sky.blackbaud.com/">
+      Home
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/docs/getting-started/">
+      Documentation
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/docs/services/">
+      API
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/developer/">
+      Developer Account
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/support/changelog/">
+      Support
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="terms">
+    <a href="https://developer.sky.blackbaud.com/terms">
+      API Terms of Use
+    </a>
+  </li>
+</ul>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-sm-push-4">
+                    <ul class="list-inline social-icons">
+  <li>
+    <a href="http://twitter.com/blackbaud" target="_blank">
+      <i class="fa fa-twitter"></i>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.facebook.com/blackbaud" target="_blank">
+      <i class="fa fa-facebook"></i>
+    </a>
+  </li>
+  <li>
+    <a href="http://www.youtube.com/user/blackbaudinc" target="_blank">
+      <i class="fa fa-youtube"></i>
+    </a>
+  </li>
+</ul>
+                  </div>
+                  <div class="clearfix visible-xs-block"></div>
+                  <div class="col-sm-4 col-sm-pull-4">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          
+        
+
+        
+          
+            <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p>&copy; 2016 Blackbaud, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</div>
+          
+        
+      </div>
+
+      
+        <bb-omnibar></bb-omnibar>
+<bb-omnibar-search-results></bb-omnibar-search-results>
+      
+
+      
+        <script src="https://sky.blackbaudcdn.net/skyux/1.16.0-4/js/sky-bundle.min.js"></script>
+      
+
+      
+
+      <script src="/js/stache.min.js"></script>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+
+      
+        
+          <script src="/assets/js/scrollreveal.js"></script>
+        
+      
+        
+          <script src="/assets/js/custom.js"></script>
+        
+      
+        
+          <script src="/assets/js/angular-local-storage.min.js"></script>
+        
+      
+        
+          <script src="/assets/js/entity-reference/app.1.2.js"></script>
+        
+      
+
+      
+
+      
+
+      
+        
+          <script>
+            !function(e,a){"use strict";function n(){var e={};try{e.omnibar={enableHelp:!1,enableSearch:!0,serviceName:"SKY API",serviceNameLink:"https://developer.sky.blackbaud.com/",enableServiceNameLink:!0,url:"https://signin.blackbaud.com/omnibar.min.js",urlDev:"https://signin.blackbaud.com/omnibar.min.js",delegationUri:"https://developer.sky.blackbaud.com/signin/"},e.omnibarSearch={resultsBaseUri:"",resourceUrl:"/content.json",resultsTemplateUri:"/assets/vendor/bb-omnibar-search/templates/bb-omnibar-search.hbs",searchFormClass:"searchenabled",searchFormClassDev:"bb-omnibar-searchenabled",searchInputId:"omnibar_searchbox",searchResultsId:"bb-omnibar-search-results"}}catch(e){}return e}function r(e,a){e.$on("bbBeginWait",function(e,n){e.stopPropagation(),a.beginPageWait(n)}),e.$on("bbEndWait",function(e,n){e.stopPropagation(),a.endPageWait(n)})}r.$inject=["$rootScope","bbWait"],a.module("stache").constant("stacheConfig",n.call()).run(r),a.element(document).ready(function(){a.bootstrap(document,["stache"])})}(window,window.angular);
+          </script>
+        
+      
+
+      
+
+    </body>
+  </html>
+

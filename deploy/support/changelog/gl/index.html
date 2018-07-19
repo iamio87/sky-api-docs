@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+
+  <html lang="en" class="">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Blackbaud SKY API Developer Portal | General Ledger Changelog</title>
+      <link rel="icon" href="/img/favicon.ico" type="image/ico">
+
+      
+        <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.16.0-4/css/sky-bundle.css">
+<link rel="stylesheet" href="/css/app.css">
+      
+      
+
+      
+        <link rel="stylesheet" href="/assets/css/custom.css">
+      
+        <link rel="stylesheet" href="/assets/css/entity-reference.css">
+      
+
+      
+
+
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2418840-1', 'auto');
+  ga('send', 'pageview');
+</script>
+      
+
+    </head>
+    <body data-base="/" class="bb-omnibar-height-padding ">
+
+      
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W56QP9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W56QP9');</script>
+      
+
+      <div id="top"></div>
+
+      
+        
+
+          <div id="ng-stache" ng-controller="NavController"  class="bb-navbar">
+            <bb-navbar>
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <ul class="nav navbar-nav navbar-left">
+  <li>
+    <a href="https://developer.sky.blackbaud.com/">
+      Home
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/docs/getting-started/" class="dropdown-toggle">
+      Documentation
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="/docs/getting-started/">Getting Started</a>
+      </li>
+<li>
+        <a href="/docs/createapp/">Create an App</a>
+      </li>
+      <li>
+        <a href="/docs/authorization/">Authorization</a>
+      </li>
+      <li>
+        <a href="/docs/basics/">Basics</a>
+      </li>
+      <li>
+       <a href="/docs/code/">Code Samples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/docs/services/" class="dropdown-toggle">
+      API
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://developer.sky.blackbaud.com/docs/services/">Endpoint Reference</a>
+      </li>
+      <li>
+        <a href="/api/entity-reference/">Entity Reference</a>
+      </li>
+      <li>
+        <a href="https://developer.sky.blackbaud.com/products/">Products</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/developer/" class="dropdown-toggle">
+      Developer Account
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://developer.sky.blackbaud.com/developer/">My Profile</a>
+      </li>
+      <li>
+        <a href="https://developer.blackbaud.com/apps">My Applications</a>
+      </li>
+      <li>
+        <a href="https://developer.sky.blackbaud.com/developer/analytics/">Analytics</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="/support/changelog/" class="dropdown-toggle">
+      Support
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+       <li>
+        <a href="https://community.blackbaud.com/developer">Community</a>
+      </li>
+      <li>
+        <a href="/support/changelog/">Changelog</a>
+      </li>
+       <li>
+        <a href="/support/issues/">Issues</a>
+      </li>
+      <li>
+        <a href="/support/ideas/">Ideas</a>
+      </li>
+      <li>
+        <a href="/support/faq/">FAQ</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="https://skyapi.statuspage.io">Status</a>
+  </li>
+</ul>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+            </bb-navbar>
+          </div>
+
+        
+      
+
+      
+
+      
+      
+
+      
+        
+          
+
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        
+          
+
+<div class="row">
+  <div class="col-sm-3 content-secondary">
+    <div class="sidebar">
+      <ul class="nav nav-stacked nav-sidebar"><li class=""><a href="/support/community/">Community</a></li><li class="current active"><a href="/support/changelog/">Changelog</a><ul class="nav"><li class=""><a href="/support/changelog/shared/">Shared</a></li><li class=""><a href="/support/changelog/ap/">Accounts Payable</a></li><li class=""><a href="/support/changelog/constituent/">Constituent</a></li><li class=""><a href="/support/changelog/fundraising/">Fundraising</a></li><li class="current active"><a href="/support/changelog/gl/">General Ledger</a><div class="headings"><ul class="nav"><li class="heading"><a href="#2018-07-19" class="smooth-scroll">2018-07-19</a></li><li class="heading"><a href="#june" class="smooth-scroll">June</a></li><li class="heading"><a href="#may" class="smooth-scroll">May</a></li><li class="heading"><a href="#april" class="smooth-scroll">April</a></li><li class="heading"><a href="#march" class="smooth-scroll">March</a></li><li class="heading"><a href="#january" class="smooth-scroll">January</a></li><li class="heading"><a href="#2017" class="smooth-scroll">2017</a></li><li class="heading"><a href="#2016" class="smooth-scroll">2016</a></li></ul></div></li><li class=""><a href="/support/changelog/gift/">Gift</a></li><li class=""><a href="/support/changelog/opportunity/">Opportunity</a></li><li class=""><a href="/support/changelog/treasury/">Treasury</a></li></ul></li><li class=""><a href="/support/issues/">Issues</a></li><li class=""><a href="/support/ideas/">Ideas</a></li><li class=""><a href="/support/faq/">FAQ</a></li><li class="visible-on-affix"><a href="#top" class="smooth-scroll"></a></li></ul>
+    </div>
+  </div>
+  <div class="col-sm-9 content-primary">
+    
+      
+<!-- STACHE MARKED -->
+<h1 id="general-ledger">General Ledger</h1>
+<p>Monitor this page to keep up with the <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/">General Ledger API</a> latest changes and SKY API service releases.</p>
+<h2 id="2018-07-19">2018-07-19</h2>
+<h3 id="new">New</h3>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/GetBudgetDetail/">
+                <td>Budget detail</td>
+                <td>GET</td>
+                <td>/budgets/{scenario_id}/details</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/EditBudget/">
+                <td>Budget</td>
+                <td>PATCH</td>
+                <td>/budgets/{scenario_id}</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListBudgetLines/">
+                <td>Budget detail lines (List)</td>
+                <td>GET</td>
+                <td>/budgets/{scenario_id}/details/lines</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="changed">Changed</h3>
+<p>We made several changes to the  <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/CreateJournalEntryBatchAttachment/">Journal entry batch attachment</a> endpoint:</p>
+<ul>
+<li>The endpoint now supports physical attachments. (Previously, it only supported link attachments.)</li>
+<li><p>Note the shape of the request in JSON form:</p>
+<pre class="language-javascript"><code>
+{
+&quot;parent_id&quot;: 0,
+&quot;name&quot;: &quot;string&quot;,
+&quot;url&quot;: &quot;string&quot;,
+&quot;type&quot;: &quot;Link&quot;,
+&quot;media_type&quot;: &quot;string&quot;,
+&quot;file&quot;: {
+  &quot;ContentLength&quot;: 0,
+  &quot;ContentType&quot;: &quot;string&quot;,
+  &quot;FileName&quot;: &quot;string&quot;,
+  &quot;InputStream&quot;: {
+    &quot;CanRead&quot;: true,
+    &quot;CanSeek&quot;: true,
+    &quot;CanTimeout&quot;: true,
+    &quot;CanWrite&quot;: true,
+    &quot;Length&quot;: 0,
+    &quot;Position&quot;: 0,
+    &quot;ReadTimeout&quot;: 0,
+    &quot;WriteTimeout&quot;: 0
+    }
+ }
+}
+</code></pre>
+</li>
+<li><p>The <code>type</code> field now accepts <code>Physical</code> but defaults to <code>Link</code>.</p>
+</li>
+<li>The <code>url</code> is required for link attachments but not for physical attachments</li>
+<li><a href="https://msdn.microsoft.com/en-us/library/system.web.httppostedfilebase(v=vs.110).aspx">The <code>file</code> field is <code>HttpPostedFileBase</code></a>. It is required for physical attachments but not for link attachments.</li>
+<li>For physical attachments, requests must be <code>multipart/form-data</code>. For example:</li>
+</ul>
+<pre class="language-javascript"><code>
+public static Task<httpresponsemessage> PostMultiPartDataFormAsync(this HttpClient client, string route, Attachment content)
+        {
+            var httpContent = new MultipartFormDataContent();
+            var streamContent = new StreamContent(content.File.InputStream);
+            var ContentDisposition = new ContentDispositionHeaderValue(&quot;form-data&quot;);
+            ContentDisposition.Name = &quot;File&quot;;
+            ContentDisposition.FileName = content.File.FileName;
+            streamContent.Headers.ContentDisposition = ContentDisposition;
+            streamContent.Headers.ContentType = new MediaTypeHeaderValue(content.File.ContentType);
+            httpContent.Add(streamContent);
+            httpContent.Add(new StringContent(content.ParentId.ToString()), &quot;ParentId&quot;);
+            httpContent.Add(new StringContent(content.Name), &quot;Name&quot;);
+            httpContent.Add(new StringContent(content.Type.ToString()), &quot;Type&quot;);
+            httpContent.Add(new StringContent(content.MediaType.ToString()), &quot;MediaType&quot;);
+
+            var request = new HttpRequestMessage(HttpMethod.Post, route)
+            {
+                Content = httpContent
+            };
+            return SendAsync(client, request);
+        }
+
+</httpresponsemessage></code></pre>
+
+<ul>
+<li>In <code>application/json</code> requests, field names must use snake casing such as <code>parent_id</code> and <code>media_type</code>, whereas in <code>multipart/form-data</code> requests, field names must use camel case, such as <code>ParentId</code> and <code>MediaType</code>.</li>
+<li>Link attachments should be sent as <code>application/json</code> formatted requests with the <code>file</code> field omitted.</li>
+<li>If the <code>file</code> field is populated in <code>application/json</code> formatted requests, the request fails unless <code>type</code> is set to <code>Link</code> because then the request ignores the file.</li>
+</ul>
+<h2 id="june">June</h2>
+<h3 id="2018-06-28">2018-06-28</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoint:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/GetJournalEntryBatchSummary/">
+                <td>Journal entry batch summary<em></em></td>
+                <td>GET</td>
+                <td>/journalentrybatches/{batch_id}/summary</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListJournalEntriesSingleJournalEntryBatch/">
+                <td>Journal entries (List)</td>
+                <td>GET</td>
+                <td>/journalentrybatches/{batch_id}/journalentries</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p><strong>*</strong> We deprecated the <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/GetJournalEntryBatch/">Journal entry batch (GET)</a> endpoint and replaced it with the <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/GetJournalEntryBatchSummary/">Journal entry batch summary (Get)</a> and <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListJournalEntriesSingleJournalEntryBatch/">Journal entries (List)</a> endpoints. We will continue to support deprecated endpoints for v1 of the General Ledger API, but we recommend transitioning to the new endpoints for a more robust and consistent response.</p>
+<h3 id="2018-06-20">2018-06-20</h3>
+<h4 id="changed">Changed</h4>
+<p>We made changes to the following endpoints:</p>
+<ul>
+<li>The <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListJournalEntryBatches/">Journal entry batch (List)</a> endpoint now includes a new <code>search_text</code> request parameter that can match <code>description</code> or <code>ui_batch_id</code>. For example, <code>?search_text=100</code> returns a list of batches with a <code>ui_batch_id</code> that contains &quot;100&quot; or a <code>description</code> that contains &quot;100&quot;.</li>
+<li>The <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListBudgets/">Budget (List)</a> endpoint now includes a new <code>scenario_id</code> field that returns the scenario ID associated with the budget.</li>
+</ul>
+<h3 id="2018-06-12">2018-06-12</h3>
+<h4 id="announcement-changes-for-general-ledger-https-developer-sky-blackbaud-com-docs-services-56eb17a0a9db9516c46bff6f-api">Announcement: Changes for <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/">General Ledger</a> API</h4>
+<p>We implemented new operation ID values in the OpenApi (fka Swagger) definitions for all endpoints in the General Ledger API. Note that any existing code relying on these endpoints will continue to function, since all routes and parameters are unchanged. However, if you make use of client-side generated code and want to regenerate your client wrapper, compile-time errors in your code stemming from new operation ID values will arise and need to be addressed.</p>
+<h3 id="2018-06-04">2018-06-04</h3>
+<h4 id="announcement-changes-planned-for-accounts-payable-https-developer-sky-blackbaud-com-docs-services-57a342f1d7dcde1c28a749fe-general-ledger-https-developer-sky-blackbaud-com-docs-services-56eb17a0a9db9516c46bff6f-and-treasury-beta-https-developer-sky-blackbaud-com-docs-services-58e3b2880528ab71c796492e-apis">Announcement: Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/57a342f1d7dcde1c28a749fe/">Accounts Payable</a>, <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/">General Ledger</a>, and <a href="https://developer.sky.blackbaud.com/docs/services/58e3b2880528ab71c796492e/">Treasury (Beta)</a> APIs</h4>
+<p>We will implement new operation ID values in the OpenApi (fka Swagger) definitions for several SKY APIs. This change will improve client-side tooling support for code generation by making these values more deterministic and friendlier across different languages. Going forward, we expect high stability of these values (meaning, we won&#x2019;t need to change them again).</p>
+<p>Note that any existing code that has been deployed will continue to function with no problems, since we are not changing any routes or parameters. If you make use of client-side generated code and want to regenerate your client wrapper, you&#x2019;ll need to fix any compile-time errors in your code stemming from new method names.</p>
+<h2 id="may">May</h2>
+<h3 id="2018-05-24">2018-05-24</h3>
+<h4 id="changed">Changed</h4>
+<p>We made changes to the following endpoints:</p>
+<ul>
+<li>The <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListTransactionDistributions/">Transaction distribution (List)</a> endpoint now returns proper <code>account_class</code> information.</li>
+<li>The <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/GetJournalEntryBatch/">Journal entry batch (GET)</a> endpoint now returns the correct number of <code>journal_entries</code>.</li>
+<li>In the <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/GetSummaryProcess/">Period summary process (GET)</a> endpoint, the <code>status</code> field has been enumerated and all values can now be seen in the Period summary process schema.</li>
+</ul>
+<h2 id="april">April</h2>
+<h3 id="2018-04-20">2018-04-20</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoint:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/EditJournalEntryBatch/">
+                <td>Journal entry batch</td>
+                <td>PATCH</td>
+                <td>/journalentrybatches/{batch_id}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>With the new endpoint, note the following:</p>
+<ul>
+<li>You can edit the <code>description</code>, <code>create_interfund_sets</code>, and <code>create_bank_account_adjustments</code> values of an existing journal entry batch.</li>
+<li>Posted journal entry batches cannot be edited.</li>
+<li>Omitting a field from a PATCH request does not edit that field with a default value. In the example below, only <code>create_interfund_entries</code> is edited, but the other fields are not.</li>
+</ul>
+<pre class="language-javascript"><code>{
+        &#x201C;create_interfund_sets&#x201D;: false
+}
+</code></pre>
+
+<h2 id="march">March</h2>
+<h3 id="2018-03-02">2018-03-02</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListClientNames/">
+                <td>Client names (List)</td>
+                <td>GET</td>
+                <td>/configuration/client_names</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListGrantStatuses/">
+                <td>Grant status (List)</td>
+                <td>GET</td>
+                <td>/grants/statuses</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListGrantTypes/">
+                <td>Grant type (List)</td>
+                <td>GET</td>
+                <td>/grants/types</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListGrantCustomFields/">
+                <td>Grant custom field (List)</td>
+                <td>GET</td>
+                <td>/grants/customfields</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<p>For the  <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/StartPeriodSummaryProcess/">Period summary process (Start)</a> endpoint, a <code>fiscal_period_id</code> was previously required. Now, when no object is sent or when a <code>fiscal_period_id</code> with value 0 is sent, all open and unoptimized fiscal periods are summarized.</p>
+<h2 id="january">January</h2>
+<h3 id="2018-01-17">2018-01-17</h3>
+<h4 id="changed">Changed</h4>
+<p>For the  <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/PostJournalEntryBatch/">Journal entry batch (Post)</a> endpoint, <code>transaction_code_value</code> can now include <code>&#x201C;&#x201D;</code> empty string for <code>value</code>.</p>
+<h2 id="2017">2017</h2>
+<h3 id="2017-11-20">2017-11-20</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/get-periodsummary-summaries/">
+                <td>Period summary (List)</td>
+                <td>GET</td>
+                <td>/periodsummary/summaries</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/GetSummaryProcess/">
+                <td>Period summary process</td>
+                <td>GET</td>
+                <td>/periodsummary/processinginfo</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/StartPeriodSummaryProcess/">
+                <td>Period summary process (Start)</td>
+                <td>POST</td>
+                <td>/periodsummary/summarize</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="2017-08-14">2017-08-14</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/CreateJournalEntryBatchAttachment/">
+                <td>Journal entry batch attachment</td>
+                <td>POST</td>
+                <td>/journalentrybatches/attachments</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListGeneralLedgerMediaTypes/">
+                <td>Media type (List)</td>
+                <td>GET</td>
+                <td>/mediaTypes</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<ul>
+<li>For the following endpoint, we added the division, department, location, and type filters. Additional data is also returned:</li>
+</ul>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/GetProject/">
+                <td>Project</td>
+                <td>GET</td>
+                <td>/projects</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<ul>
+<li>For the following endpoint, we added the encumbrance and post date filters. Additional data is also returned:</li>
+</ul>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListTransactionDistributions/">
+                <td>Transaction distribution (List)</td>
+                <td>GET</td>
+                <td>/transactiondistributions</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="2017-06-15">2017-06-15</h3>
+<h4 id="changed">Changed</h4>
+<p>We made several changes to the <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/SearchAccounts/">Get Account (Search)</a>, <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/SearchProjects/">Get Project (Search)</a>, <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListJournalEntryBatches/">Get Journal entry batch (List)</a>, and <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListTransactionDistributions/">Get Transaction distribution (List)</a> endpoints.</p>
+<ul>
+<li><p>The following properties are now returned: <code>date_added</code>, <code>date_modified</code>, <code>added_by</code>, and <code>modified_by</code>.</p>
+</li>
+<li><p>The <code>last_modified</code> filter is now included. This filter causes the response to only include results where <code>date_modified</code> is greater than or equal to the <code>last_modified</code> filter value.</p>
+</li>
+</ul>
+<h3 id="2017-05-05">2017-05-05</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListBudgetGrants/">
+                <td>Budget grant (List)</td>
+                <td>GET</td>
+                <td>/budgets/{scenario_id}/grants</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListBudgetProjects/">
+                <td>Budget project (List)</td>
+                <td>GET</td>
+                <td>/budgets/{scenario_id}/projects</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<p>We increased the maximum record limit from 500 to 5000 on the following Get endpoint:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListTransactionDistributions/">
+                <td>Transaction distribution</td>
+                <td>GET</td>
+                <td>/transactiondistributions</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="2017-01-18">2017-01-18</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/GetAccount/">
+                <td>Account</td>
+                <td>GET</td>
+                <td>/accounts/{account_id}</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/GetProject/">
+                <td>Project</td>
+                <td>GET</td>
+                <td>/projects/{project_id}</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListAccountCashflows/">
+                <td>Account cashflows (List)</td>
+                <td>GET</td>
+                <td>/accounts/cashflows</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListAccountWorkingCapitals/">
+                <td>Account working capitals (List)</td>
+                <td>GET</td>
+                <td>/accounts/workingcapitals</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListAccountCustomFields/">
+                <td>Account custom fields (List)</td>
+                <td>GET</td>
+                <td>/accounts/customfields</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2 id="2016">2016</h2>
+<h3 id="2016-12-06">2016-12-06</h3>
+<h4 id="new">New</h4>
+<ul>
+<li>Added the following endpoints:</li>
+</ul>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListJournalEntryCustomFields/">
+                <td>Journal entry custom field (List)</td>
+                <td>GET</td>
+                <td>/journalentries/customfields</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListProjectCustomFields/">
+                <td>Project custom field (List)</td>
+                <td>GET</td>
+                <td>/projects/customfields</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/GetBudget/">
+                <td>Budget</td>
+                <td>GET</td>
+                <td>/budgets</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListBudgets/">
+                <td>Budget (List)</td>
+                <td>GET</td>
+                <td>/budgets/{scenario_id}</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListBudgetAccounts/">
+                <td>Budget account (List)</td>
+                <td>GET</td>
+                <td>/budgets/{scenario_id}/accounts</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListLedgerSummaries/">
+                <td>Ledger summary (List)</td>
+                <td>GET</td>
+                <td>/summary/{fiscal_year_id}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<ul>
+<li>Added new custom field entities to the following endpoints:</li>
+</ul>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/CreateProject/">
+                <td>Project</td>
+                <td>POST</td>
+                <td>/projects</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/CreateJournalEntries/">
+                <td>Journal entry</td>
+                <td>POST</td>
+                <td>/journalentrybatches/{batch_id}/journalentries</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/GetJournalEntryBatch/">
+                <td>Journal entry batch</td>
+                <td>GET</td>
+                <td>/journalentrybatches/{batch_id}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<p>For consistency across APIs, all responses to GET endpoints that return collections now return an object with &quot;count&quot; and &quot;value&quot; properties. The following endpoints are affected:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListClasses/">
+                <td>Class (List)</td>
+                <td>GET</td>
+                <td>/classes</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListJournalCodes/">
+                <td>Journal code (List)</td>
+                <td>GET</td>
+                <td>/journalcodes</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListProjectDepartments/">
+                <td>Project department (List)</td>
+                <td>GET</td>
+                <td>/projects/departments</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListProjectDivisions/">
+                <td>Project division (List)</td>
+                <td>GET</td>
+                <td>/projects/divisions</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListProjectLocations/">
+                <td>Project location (List)</td>
+                <td>GET</td>
+                <td>/projects/locations</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListProjectStatuses/">
+                <td>Project status (List)</td>
+                <td>GET</td>
+                <td>/projects/statuses</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListProjectTypes/">
+                <td>Project type (List)</td>
+                <td>GET</td>
+                <td>/projects/types</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListTransactionCodes/">
+                <td>Transaction code (List)</td>
+                <td>GET</td>
+                <td>/transactioncodes</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListTransactionCodeValuesSingleTransactionCode/">
+                <td>Transaction code value (List)</td>
+                <td>GET</td>
+                <td>/transactioncodes/{transaction_code_id}/values</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h3 id="2016-11-14">2016-11-14</h3>
+<h4 id="announcement-breaking-change-planned-for-general-ledger-api-https-developer-sky-blackbaud-com-docs-services-56eb17a0a9db9516c46bff6f-">Announcement:  Breaking Change Planned for <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/">General Ledger API</a></h4>
+<p>For consistency across APIs, we will implement the following changes:</p>
+<ul>
+<li>All responses to GET endpoints that return collections will return an object with &quot;count&quot; and &quot;value&quot; properties.</li>
+<li>The following endpoints are affected:</li>
+</ul>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListClasses/">
+                <td>Class (List)</td>
+                <td>GET</td>
+                <td>/classes</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListJournalCodes/">
+                <td>Journal code (List)</td>
+                <td>GET</td>
+                <td>/journalcodes</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListProjectDepartments/">
+                <td>Project department (List)</td>
+                <td>GET</td>
+                <td>/projects/departments</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListProjectDivisions/">
+                <td>Project division (List)</td>
+                <td>GET</td>
+                <td>/projects/divisions</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListProjectLocations/">
+                <td>Project location (List)</td>
+                <td>GET</td>
+                <td>/projects/locations</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListProjectStatuses/">
+                <td>Project status (List)</td>
+                <td>GET</td>
+                <td>/projects/statuses</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListProjectTypes/">
+                <td>Project type (List)</td>
+                <td>GET</td>
+                <td>/projects/types</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListTransactionCodes/">
+                <td>Transaction code (List)</td>
+                <td>GET</td>
+                <td>/transactioncodes</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListTransactionCodeValuesSingleTransactionCode/">
+                <td>Transaction code value (List)</td>
+                <td>GET</td>
+                <td>/transactioncodes/{transaction_code_id}/values</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="2016-11-01">2016-11-01</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/CreateProject/">
+                <td>Create project (Post)</td>
+                <td>POST</td>
+                <td>/projects</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/CreateProjectContact/">
+                <td>Create project contact (Post)</td>
+                <td>POST</td>
+                <td>/projects/{project_id}/contacts</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h3 id="2016-10-06">2016-10-06</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoints:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListFiscalYears/">
+                <td>Fiscal year (List)</td>
+                <td>GET</td>
+                <td>/fiscalyears</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListClasses/">
+                <td>Class (List)</td>
+                <td>GET</td>
+                <td>/classes</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListAccountStructures/">
+                <td>Account structure</td>
+                <td>GET</td>
+                <td>/accounts/structure</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/GetAccountSegment/">
+                <td>Account segment value (List)</td>
+                <td>GET</td>
+                <td>/accounts/segments</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListAccountCodes/">
+                <td>Account code (List)</td>
+                <td>GET</td>
+                <td>/accounts/codes</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListAccountFunds/">
+                <td>Account fund (List)</td>
+                <td>GET</td>
+                <td>/accounts/funds</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListProjectTypes/">
+                <td>Project type (List)</td>
+                <td>GET</td>
+                <td>/projects/types</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListProjectStatuses/">
+                <td>Project status (List)</td>
+                <td>GET</td>
+                <td>/projects/statuses</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListProjectDivisions/">
+                <td>Project division (List)</td>
+                <td>GET</td>
+                <td>/projects/divisions</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListProjectDepartments/">
+                <td>Project department (List)</td>
+                <td>GET</td>
+                <td>/projects/departments</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListProjectLocations/">
+                <td>Project location (List)</td>
+                <td>GET</td>
+                <td>/projects/locations</td>
+            </tr><br>        </tbody>
+    </table>
+</div>
+
+<h4 id="changed">Changed</h4>
+<p>You can now specify Class on journal entries (this affects all endpoints associated with journal entry batches).</p>
+<h3 id="2016-08-12">2016-08-12</h3>
+<h4 id="breaking-change">Breaking Change</h4>
+<p>We changed the default and maximum record limits on the following search and list endpoints. The default is now 100 records, and the maximum is 500 records.</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListTransactionDistributions/">
+                <td>Transaction distribution (Search)</td>
+                <td>GET</td>
+                <td>/transactiondistributions</td>
+            </tr>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/SearchAccounts/">
+                <td>Account (Search)</td>
+                <td>GET</td>
+                <td>/accounts</td>
+            </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/SearchProjects/">
+                <td>Project (Search)</td>
+                <td>GET</td>
+                <td>/projects</td>
+            </tr>
+      <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListJournalEntryBatches/">
+                <td>Journal entry batch (List)</td>
+                <td>GET</td>
+                <td>/journalentrybatches</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h3 id="2016-07-05">2016-07-05</h3>
+<h4 id="changed">Changed</h4>
+<p>We implemented a previously announced, breaking change. We removed the Journal entry batch (Edit) <code>PUT</code> endpoint. At a later date, we plan to replace <code>PUT</code> with <code>PATCH</code>, instead.</p>
+<h3 id="2016-06-30">2016-06-30</h3>
+<h4 id="announcement-breaking-change-planned-for-general-ledger-api-https-developer-sky-blackbaud-com-docs-services-56eb17a0a9db9516c46bff6f-">Announcement:  Breaking Change Planned for <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/">General Ledger API</a></h4>
+<p>In the coming days, a breaking change will be placed into effect. We will remove the Journal entry batch (Edit) <code>PUT</code> endpoint. At a later date, we plan to replace <code>PUT</code> with <code>PATCH</code>, instead.</p>
+<h3 id="2016-06-22">2016-06-22</h3>
+<h4 id="new">New</h4>
+<p>Added the following endpoint:</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Method</th>
+                <th>Route</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="clickable-row" data-url="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/operations/ListTransactionDistributions/">
+                <td>Transaction distribution (Search)</td>
+                <td>GET</td>
+                <td>/transactiondistributions</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 id="2016-06-15">2016-06-15</h3>
+<h4 id="changed">Changed</h4>
+<p>We&apos;ve added a versioning indicator to the General Ledger API&apos;s base URL. Specifically, all new API requests must begin with <code>https://api.sky.blackbaud.com/generalledger/v1</code>.</p>
+<h3 id="2016-06-10">2016-06-10</h3>
+<h4 id="announcement-breaking-changes-planned-for-general-ledger-api-https-developer-sky-blackbaud-com-docs-services-56eb17a0a9db9516c46bff6f-">Announcement: Breaking Changes Planned for <a href="https://developer.sky.blackbaud.com/docs/services/56eb17a0a9db9516c46bff6f/">General Ledger API</a></h4>
+<ul>
+<li>We will be adding a versioning indicator to the General Ledger API&apos;s base URL. Specifically, all new API requests should begin with <code>https://api.sky.blackbaud.com/generalledger/v1</code>.</li>
+<li>This change is planned to take effect on Wednesday, June 15.</li>
+</ul>
+<h3 id="2016-05-27">2016-05-27</h3>
+<h4 id="new">New</h4>
+<ul>
+<li>Added a <a href="/docs/getting-started/">General Ledger getting started guide</a> to help you make your first General Ledger API call with our interactive SKY API Console.</li>
+</ul>
+
+    
+  </div>
+</div>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+      
+
+      
+
+      
+        <div class="back-to-top" data-offset="220">
+  <i class="fa fa-angle-double-up"></i>
+</div>
+      
+
+      <div class="affix-stop">
+        
+
+        
+          
+
+            <div class="footer-site">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-6 col-sm-4">
+                    <h3>
+  <a href="https://developer.sky.blackbaud.com/">
+    SKY API
+  </a>
+</h3>
+                    <ul class="nav navbar-nav navbar-left">
+  <li>
+    <a href="https://developer.sky.blackbaud.com/">
+      Home
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/docs/getting-started/">
+      Documentation
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/docs/services/">
+      API
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/developer/">
+      Developer Account
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/support/changelog/">
+      Support
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="terms">
+    <a href="https://developer.sky.blackbaud.com/terms">
+      API Terms of Use
+    </a>
+  </li>
+</ul>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-sm-push-4">
+                    <ul class="list-inline social-icons">
+  <li>
+    <a href="http://twitter.com/blackbaud" target="_blank">
+      <i class="fa fa-twitter"></i>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.facebook.com/blackbaud" target="_blank">
+      <i class="fa fa-facebook"></i>
+    </a>
+  </li>
+  <li>
+    <a href="http://www.youtube.com/user/blackbaudinc" target="_blank">
+      <i class="fa fa-youtube"></i>
+    </a>
+  </li>
+</ul>
+                  </div>
+                  <div class="clearfix visible-xs-block"></div>
+                  <div class="col-sm-4 col-sm-pull-4">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          
+        
+
+        
+          
+            <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p>&copy; 2016 Blackbaud, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</div>
+          
+        
+      </div>
+
+      
+        <bb-omnibar></bb-omnibar>
+<bb-omnibar-search-results></bb-omnibar-search-results>
+      
+
+      
+        <script src="https://sky.blackbaudcdn.net/skyux/1.16.0-4/js/sky-bundle.min.js"></script>
+      
+
+      
+
+      <script src="/js/stache.min.js"></script>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+
+      
+        
+          <script src="/assets/js/scrollreveal.js"></script>
+        
+      
+        
+          <script src="/assets/js/custom.js"></script>
+        
+      
+        
+          <script src="/assets/js/angular-local-storage.min.js"></script>
+        
+      
+        
+          <script src="/assets/js/entity-reference/app.1.2.js"></script>
+        
+      
+
+      
+
+      
+
+      
+        
+          <script>
+            !function(e,a){"use strict";function n(){var e={};try{e.omnibar={enableHelp:!1,enableSearch:!0,serviceName:"SKY API",serviceNameLink:"https://developer.sky.blackbaud.com/",enableServiceNameLink:!0,url:"https://signin.blackbaud.com/omnibar.min.js",urlDev:"https://signin.blackbaud.com/omnibar.min.js",delegationUri:"https://developer.sky.blackbaud.com/signin/"},e.omnibarSearch={resultsBaseUri:"",resourceUrl:"/content.json",resultsTemplateUri:"/assets/vendor/bb-omnibar-search/templates/bb-omnibar-search.hbs",searchFormClass:"searchenabled",searchFormClassDev:"bb-omnibar-searchenabled",searchInputId:"omnibar_searchbox",searchResultsId:"bb-omnibar-search-results"}}catch(e){}return e}function r(e,a){e.$on("bbBeginWait",function(e,n){e.stopPropagation(),a.beginPageWait(n)}),e.$on("bbEndWait",function(e,n){e.stopPropagation(),a.endPageWait(n)})}r.$inject=["$rootScope","bbWait"],a.module("stache").constant("stacheConfig",n.call()).run(r),a.element(document).ready(function(){a.bootstrap(document,["stache"])})}(window,window.angular);
+          </script>
+        
+      
+
+      
+
+    </body>
+  </html>
+

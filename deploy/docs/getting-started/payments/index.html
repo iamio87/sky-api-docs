@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+
+  <html lang="en" class="">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Blackbaud SKY API Developer Portal | Getting Started with Payments API</title>
+      <link rel="icon" href="/img/favicon.ico" type="image/ico">
+
+      
+        <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.16.0-4/css/sky-bundle.css">
+<link rel="stylesheet" href="/css/app.css">
+      
+      
+
+      
+        <link rel="stylesheet" href="/assets/css/custom.css">
+      
+        <link rel="stylesheet" href="/assets/css/entity-reference.css">
+      
+
+      
+
+
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2418840-1', 'auto');
+  ga('send', 'pageview');
+</script>
+      
+
+    </head>
+    <body data-base="/" class="bb-omnibar-height-padding ">
+
+      
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W56QP9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W56QP9');</script>
+      
+
+      <div id="top"></div>
+
+      
+        
+
+          <div id="ng-stache" ng-controller="NavController"  class="bb-navbar">
+            <bb-navbar>
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <ul class="nav navbar-nav navbar-left">
+  <li>
+    <a href="https://developer.sky.blackbaud.com/">
+      Home
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/docs/getting-started/" class="dropdown-toggle">
+      Documentation
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="/docs/getting-started/">Getting Started</a>
+      </li>
+<li>
+        <a href="/docs/createapp/">Create an App</a>
+      </li>
+      <li>
+        <a href="/docs/authorization/">Authorization</a>
+      </li>
+      <li>
+        <a href="/docs/basics/">Basics</a>
+      </li>
+      <li>
+       <a href="/docs/code/">Code Samples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/docs/services/" class="dropdown-toggle">
+      API
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://developer.sky.blackbaud.com/docs/services/">Endpoint Reference</a>
+      </li>
+      <li>
+        <a href="/api/entity-reference/">Entity Reference</a>
+      </li>
+      <li>
+        <a href="https://developer.sky.blackbaud.com/products/">Products</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/developer/" class="dropdown-toggle">
+      Developer Account
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://developer.sky.blackbaud.com/developer/">My Profile</a>
+      </li>
+      <li>
+        <a href="https://developer.blackbaud.com/apps">My Applications</a>
+      </li>
+      <li>
+        <a href="https://developer.sky.blackbaud.com/developer/analytics/">Analytics</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="/support/changelog/" class="dropdown-toggle">
+      Support
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+       <li>
+        <a href="https://community.blackbaud.com/developer">Community</a>
+      </li>
+      <li>
+        <a href="/support/changelog/">Changelog</a>
+      </li>
+       <li>
+        <a href="/support/issues/">Issues</a>
+      </li>
+      <li>
+        <a href="/support/ideas/">Ideas</a>
+      </li>
+      <li>
+        <a href="/support/faq/">FAQ</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="https://skyapi.statuspage.io">Status</a>
+  </li>
+</ul>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+            </bb-navbar>
+          </div>
+
+        
+      
+
+      
+
+      
+      
+
+      
+        
+          
+
+<div class="content">
+  <div class="bg-tutorial">
+    <div class="row">
+      <div class="col-sm-12">
+        
+          
+
+<div class="row">
+  <div class="col-lg-2 col-md-3 col-sm-12 sidebar-tutorial content-secondary">
+    <div class="sidebar">
+      <ul class="nav nav-stacked nav-sidebar"><li class="current active"><a href="/docs/getting-started/">Getting Started</a></li><li class=""><a href="/docs/createapp/">Create an App</a></li><li class=""><a href="/docs/authorization/">Authorization</a></li><li class=""><a href="/docs/basics/">Basics</a></li><li class=""><a href="/docs/code/">Code Samples</a></li><li class="visible-on-affix"><a href="#top" class="smooth-scroll"></a></li></ul>
+    </div>
+  </div>
+  <div class="col-lg-8 col-md-8 col-sm-12 content-primary">
+    
+      
+
+
+  
+
+<div class="pull-right partial-edit-header">
+    <a href="#disqus_thread" target="_self" class="edit-link btn btn-primary">
+        Comments
+    </a>
+</div><div class="pull-right partial-edit-header">
+    <a href="https://github.com/blackbaud/sky-api-docs/blob/master/content/docs/getting-started/payments/index.md" target="_blank" class="edit-link btn btn-primary" rel="noopener noreferrer">
+        <i class="fa fa-pencil"></i> Edit in GitHub
+    </a>
+</div>
+
+<section class="section-padding bg-tutorial">
+  <div class="text-center">
+    <h1 class="tutorial" id="getting-started-with-payments-api-beta">Getting Started with Payments API (Beta)</h1>
+
+<p class="lead tutorial">To get started using the Payments API (Beta), follow this step-by-step guide. After you complete this tutorial, you&apos;ll have your Blackbaud developer account and API subscription keys, and you&apos;ll learn how to try our SKY API console.</p>
+<p class="lead tutorial">For information about changes to the Payments API (Beta), see the <a href="https://apidocs.sky.blackbaud.com/support/changelog/payments/">changelog</a>.</p>
+
+  <ul class="slide-container">
+<li class="slide">
+<h2 class="tutorial" id="step-1--set-up-a-developer-account">Step 1 &#x2013; Set up a developer account</h2>
+<p style="text-align: left;"><strong><a href="https://developer.sky.blackbaud.com/signup/" target="_blank" rel="noopener noreferrer">Sign up</a></strong> for a Blackbaud developer account. This account represents you as a developer within the Blackbaud Developer Portal.</p>
+<p style="text-align: left;">Already have an account? <strong><a href="https://developer.sky.blackbaud.com/signin/" target="_blank" rel="noopener noreferrer">Sign in</a></strong> to continue with the Getting Started with Payments API (Beta).</p>
+</li>
+
+<li class="slide">
+<h2 class="tutorial" id="step-2--join-the-payments-api-preview-group">Step 2 &#x2013; Join the Payments API Preview group</h2>
+<p style="text-align: left;">To view and use the Payments API during Closed Beta, you must be a member of the Payments API Preview group and signed in with your Blackbaud developer account. Otherwise, you will see an error page.</p>
+<p style="text-align: left;"><strong><a href="mailto:skyapi@blackbaud.com?subject=Payments%20API%20|%20Request%20to%20join%20Payments%20API%20Preview%20group">Contact us</a></strong> to request joining this group. Please include your name and your organization&apos;s name. We will reply to confirm when you&#x2019;ve been added, so you can continue with next steps.</p></li>
+
+<li class="slide">
+<h2 class="tutorial" id="step-3--get-payments-api-subscription-keys-">Step 3 &#x2013; Get Payments API subscription keys </h2>
+<p style="text-align: left;">You must include a valid API subscription key with each request to the Payments API. This subscription key is associated with your Blackbaud developer account.</p>
+<div class="row">
+  <div class="col-md-12" style="text-align: left;">
+<h3 id="how-to-get-api-subscription-keys">How to get API subscription keys?</h3>
+<ol><li>To request a subscription to the Payments API, from the <strong><a href="https://developer.sky.blackbaud.com/products/">Products page</a></strong> select <strong>Payments API Preview</strong>. 
+  
+  <p><bb-alert bb-alert-type="info"><strong><em>Note:</em></strong> This option is not the same as the <strong>SKY API Standard Edition</strong> subscription. If you don&apos;t see the <strong>Payments API Preview</strong> option, make sure you completed step 2.</bb-alert></p></li>
+ 
+<li>Click <strong>Review terms and subscribe</strong>. The SKY API Terms of Use will appear in a pop-up window.</li>
+<li>Review and agree to the Terms of Use.</li>
+<li>To submit your request, click <strong>Add subscription</strong>.</li></ol>
+<p style="text-align: left;">Blackbaud approves all subscription requests for the Payments API. You will receive an email notification when your request is approved. After it is approved, you can view the subscription details within your developer <strong><a href="https://developer.sky.blackbaud.com/developer/">profile</a></strong>. For developers using multiple APIs, note that the Payments API subscription is different than your other SKY API subscription.</p>
+
+</div></div>
+
+<div class="row">
+  <div class="col-md-12" style="text-align: left;">
+<h3 id="about-your-subscription">About your subscription</h3> 
+<p style="text-align: left;">Your developer profile provides details about your API subscriptions. Each <strong><a href="https://apidocs.sky.blackbaud.com/docs/basics/#!#subscription">subscription</a></strong> contains a <strong>Primary key</strong> and a <strong>Secondary key</strong>. You can use either key as the subscription key value for the <code>Bb-Api-Subscription-Key</code> request header in calls to the API.</p>
+<img src="/assets/img/getting_started_payments_step_3_developer_profile.png">
+
+</div></div>
+</li>
+
+<li class="slide">
+<h2 class="tutorial" id="step-4--view-the-endpoint-reference">Step 4 &#x2013; View the Endpoint reference</h2>
+<div class="row">
+  <div class="col-md-12" style="text-align: left;">
+<p style="text-align: left;">Now, you are ready to explore the endpoints available to you.</p>
+
+<ol>
+<li>Open the <strong><a href="https://developer.sky.blackbaud.com/docs/services/" target="_blank" rel="noopener noreferrer">Endpoint Reference</a></strong> and select <strong><a href="https://developer.sky.blackbaud.com/docs/services/payments">Payments (Beta)</a></strong>. A list of endpoints appears. If you are not logged in or are not part of the preview group, the Payments (Beta) option does not appear in the Endpoint Reference.</li>
+<li>Select an endpoint from the list.</li>
+<li>Review the information in the reference, including the:<br>
+<ul type="disc"><li>Request URL</li>
+<li>Request parameters</li>
+<li>Request headers</li>
+<li>Response codes</li>
+<li>Response body</li>
+<li>Sample JSON data</li>
+<li>Code samples</li>
+</ul></li>
+</ol>
+</div><div class="col-md-12" style="text-align: left;">
+<img src="/assets/img/getting_started_payments_step_4_endpoint_ref.png">
+</div></div></li>
+
+<li class="slide">
+<h2 class="tutorial" id="step-5--try-it">Step 5 &#x2013; Try it</h2>
+<div class="row">
+    <div class="col-md-12" style="text-align: left;">
+<p>When you are signed in, you can test the Payments API with the SKY API Console. </p>
+
+
+<ol>
+<li>From the <a href="https://developer.sky.blackbaud.com/docs/services/payments"><strong>Payments API Endpoint Reference</strong></a>, navigate to an endpoint such as <strong>GET Payment configuration list</strong>, and click <strong>Try it</strong>. This activates the SKY API Console.</li>
+<li>Under <strong>Query parameters</strong>, enter a parameter. For example, enter <code>true</code> for the <code>include_inactive</code> parameter.</li>
+<li>Under <strong>Headers</strong>, select the <strong>Show/Hide</strong> icon in the <code>Bb-Api-Subscription-Key</code> field.  The value reflects one of your Payments API subscription keys.
+<p><bb-alert bb-alert-type="info"><strong><em>Note:</em></strong> The  <strong>Request URL</strong> and <strong>HTTP request</strong> change based on the values for the parameter and request header field values.</bb-alert></p></li>
+
+<br>
+
+<li>Under <strong>Authorization</strong>, select <strong>Authorization code</strong> in the <strong>Blackbaud OAuth 2.0 Service</strong> field.<br>
+<img title="Authorization Code" alt="Authorization Code" src="/assets/img/getting_started_step4_oauth.png"></li>
+<li>The Blackbaud OAuth 2.0 Service displays a <strong>SKY API Console</strong> pop-up window.</li>
+ 
+<li>Select your Blackbaud Merchant Services instance.<p><bb-alert bb-alert-type="info"><strong><em>Note:</em></strong> Your Blackbaud Merchant Services instance will not appear unless your admin has invited you to an environment and you have accepted the invite.</bb-alert></p></li>
+
+<li>Click <strong>Authorize</strong>.</li>
+<li>The <strong>HTTP request</strong> is populated with the <code>Authorization:Bearer </code>  header. This represents the access token for the request.<br>
+</li>
+<li>Click <strong>Send</strong> to submit the API request.</li>
+<li>The response includes a status, latency, and content including JSON data for the requested endpoint.<br>
+<img title="Result result" alt="Request result" src="/assets/img/getting_started_step4_request_result.png"> </li>
+
+</ol></div></div>
+  
+</li>
+
+<li class="slide">
+<h2 class="tutorial" id="step-6--join-the-developer-community">Step 6 &#x2013; Join the Developer Community</h2>
+<div class="row">
+  <div class="col-md-12" style="text-align: left;">
+<p>Join our <strong><a href="https://community.blackbaud.com/developer">Developer Community</a></strong> to engage with Blackbaud and other developers.</p>
+<ol><li>Share feedback about your initial experience, and ask ongoing questions, in the <strong><a href="https://community.blackbaud.com/forums/viewcategory/503">Payments API forum</a></strong>.</li>
+<li><strong><a href="https://community.blackbaud.com/mycommunity/myaccount#settings_subscriptions">Subscribe to receive notifications</a></strong> for recent <strong><a href="https://community.blackbaud.com/blogs/69">SKY API Announcements</a></strong> and <strong><a href="https://community.blackbaud.com/forums/viewcategory/425">Developer Discussions</a></strong>.</li>
+  <li>Submit new <strong><a href="https://community.blackbaud.com/developer/ideas">ideas</a></strong> for how we can improve the Payments API. Vote and comment on existing ideas.</li>
+</ol>
+
+</div></div>
+</li>
+
+<li class="slide">
+<h2 class="tutorial" id="step-7--create-a-payments-api-user-account">Step 7 &#x2013; Create a Payments API user account</h2>
+<div class="row">
+  <div class="col-md-12" style="text-align: left;">
+    <p>The Payments API uses the <strong><a href="https://oauth.net/2/">OAuth 2.0</a></strong> protocol to authorize API requests. This provides a secure mechanism for your application to access Blackbaud Merchant Services customer data and capabilities without exposing user credentials (username/password) to your application. Instead, users must authorize your application to call the API on their behalf. Refer to our <strong><a href="https://apidocs.sky.blackbaud.com/docs/authorization/">Authorization</a></strong> section for more details.</p>
+<p>Your organization may wish to create a new, dedicated Blackbaud user account, to be used to authorize your application(s) to make Payments API requests on its behalf. During this Closed Beta phase, this step requires manual coordination with us.</p>
+<ol><li><strong><a href="https://signin.blackbaud.com/signin/sign-up">Create a new Blackbaud user account</a></strong> that you will use as your Payments API user.</li>
+  <li><strong><a href="https://signin.blackbaud.com/signin/">Sign in</a></strong> as your new Payments API user.</li>
+  <li>While signed in, <strong><a href="https://signin.blackbaud.com/api/user">click here</a></strong> or manually navigate to <strong><a href="https://signin.blackbaud.com/api/user">https://signin.blackbaud.com/api/user</a></strong>. You should see a page that looks like below.<br>
+<img title="Authorization Code" alt="Authorization Code" src="/assets/img/getting_started_step7_payments_signin_page.png"></li>
+<li>Copy the contents of this page and <strong><a href="mailto:PaymentApiDevSupport@blackbaud.com?subject=Payments%20API%20|%20Request%20to%20create%20Payments%20API%20user">email it to us</a></strong>. We will reply to confirm when your API user has been properly configured, so you can continue with next steps.</li>
+</ol>
+
+</div></div>
+</li>
+
+<li class="slide">
+<h2 class="tutorial" id="step-8--next-steps">Step 8 &#x2013; Next steps</h2>
+<div class="row">
+  <div class="col-md-12" style="text-align: left;">
+<p>Once you&#x2019;ve gotten started with the Payments API, you can use available resources to build an application using Payments API.</p>
+<ol><li>Learn how to <strong><a href="https://apidocs.sky.blackbaud.com/docs/createapp/">create an application</a></strong> with SKY API.<br>
+<p><bb-alert bb-alert-type="info"><strong><em>Note:</em></strong> During this Closed Beta phase, you will not be able to complete Step 3 of this tutorial on your own for apps using Payments API. Instead, <strong><a href="mailto:skyapi@blackbaud.com?subject=Payments%20API%20|%20Request%20to%20activate%20Payments%20API%20application">contact us</a></strong> with your application ID so we can activate it on your behalf.</bb-alert></p></li>
+<li>Learn how <strong><a href="https://apidocs.sky.blackbaud.com/docs/authorization/">Authorization</a></strong> works, including the associated <strong><a href="https://apidocs.sky.blackbaud.com/docs/code/auth-code-flow/">tutorials</a></strong> and <strong><a href="https://apidocs.sky.blackbaud.com/docs/code/">code samples</a></strong>.</li>
+  <li>Subscribe to <strong><a href="https://skyapi.statuspage.io/">SKY API status</a></strong> updates.</li>
+</ol>
+
+</div></div>
+</li>
+
+</ul>
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//sky-api.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+</div>
+
+
+    
+  </div>
+</section></div>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+      </div>
+
+      
+
+      
+        <div class="back-to-top" data-offset="220">
+  <i class="fa fa-angle-double-up"></i>
+</div>
+      
+
+      <div class="affix-stop">
+        
+
+        
+          
+
+            <div class="footer-site">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-6 col-sm-4">
+                    <h3>
+  <a href="https://developer.sky.blackbaud.com/">
+    SKY API
+  </a>
+</h3>
+                    <ul class="nav navbar-nav navbar-left">
+  <li>
+    <a href="https://developer.sky.blackbaud.com/">
+      Home
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/docs/getting-started/">
+      Documentation
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/docs/services/">
+      API
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/developer/">
+      Developer Account
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/support/changelog/">
+      Support
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="terms">
+    <a href="https://developer.sky.blackbaud.com/terms">
+      API Terms of Use
+    </a>
+  </li>
+</ul>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-sm-push-4">
+                    <ul class="list-inline social-icons">
+  <li>
+    <a href="http://twitter.com/blackbaud" target="_blank">
+      <i class="fa fa-twitter"></i>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.facebook.com/blackbaud" target="_blank">
+      <i class="fa fa-facebook"></i>
+    </a>
+  </li>
+  <li>
+    <a href="http://www.youtube.com/user/blackbaudinc" target="_blank">
+      <i class="fa fa-youtube"></i>
+    </a>
+  </li>
+</ul>
+                  </div>
+                  <div class="clearfix visible-xs-block"></div>
+                  <div class="col-sm-4 col-sm-pull-4">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          
+        
+
+        
+          
+            <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p>&copy; 2016 Blackbaud, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</div>
+          
+        
+      </div>
+
+      
+        <bb-omnibar></bb-omnibar>
+<bb-omnibar-search-results></bb-omnibar-search-results>
+      
+
+      
+        <script src="https://sky.blackbaudcdn.net/skyux/1.16.0-4/js/sky-bundle.min.js"></script>
+      
+
+      
+
+      <script src="/js/stache.min.js"></script>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+
+      
+        
+          <script src="/assets/js/scrollreveal.js"></script>
+        
+      
+        
+          <script src="/assets/js/custom.js"></script>
+        
+      
+        
+          <script src="/assets/js/angular-local-storage.min.js"></script>
+        
+      
+        
+          <script src="/assets/js/entity-reference/app.1.2.js"></script>
+        
+      
+
+      
+
+      
+
+      
+        
+          <script>
+            !function(e,a){"use strict";function n(){var e={};try{e.omnibar={enableHelp:!1,enableSearch:!0,serviceName:"SKY API",serviceNameLink:"https://developer.sky.blackbaud.com/",enableServiceNameLink:!0,url:"https://signin.blackbaud.com/omnibar.min.js",urlDev:"https://signin.blackbaud.com/omnibar.min.js",delegationUri:"https://developer.sky.blackbaud.com/signin/"},e.omnibarSearch={resultsBaseUri:"",resourceUrl:"/content.json",resultsTemplateUri:"/assets/vendor/bb-omnibar-search/templates/bb-omnibar-search.hbs",searchFormClass:"searchenabled",searchFormClassDev:"bb-omnibar-searchenabled",searchInputId:"omnibar_searchbox",searchResultsId:"bb-omnibar-search-results"}}catch(e){}return e}function r(e,a){e.$on("bbBeginWait",function(e,n){e.stopPropagation(),a.beginPageWait(n)}),e.$on("bbEndWait",function(e,n){e.stopPropagation(),a.endPageWait(n)})}r.$inject=["$rootScope","bbWait"],a.module("stache").constant("stacheConfig",n.call()).run(r),a.element(document).ready(function(){a.bootstrap(document,["stache"])})}(window,window.angular);
+          </script>
+        
+      
+
+      
+
+    </body>
+  </html>
+
