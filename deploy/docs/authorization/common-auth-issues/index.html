@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+  <html lang="en" class="">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Blackbaud SKY API Developer Portal | Common Authorization Issues</title>
+      <link rel="icon" href="/img/favicon.ico" type="image/ico">
+
+      
+        <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.16.0-4/css/sky-bundle.css">
+<link rel="stylesheet" href="/css/app.css">
+      
+      
+
+      
+        <link rel="stylesheet" href="/assets/css/custom.css">
+      
+        <link rel="stylesheet" href="/assets/css/entity-reference.css">
+      
+
+      
+
+
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2418840-1', 'auto');
+  ga('send', 'pageview');
+</script>
+      
+
+    </head>
+    <body data-base="/" class="bb-omnibar-height-padding ">
+
+      
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W56QP9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W56QP9');</script>
+      
+
+      <div id="top"></div>
+
+      
+        
+
+          <div id="ng-stache" ng-controller="NavController"  class="bb-navbar">
+            <bb-navbar>
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <ul class="nav navbar-nav navbar-left">
+  <li>
+    <a href="https://developer.sky.blackbaud.com/">
+      Home
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/docs/getting-started/" class="dropdown-toggle">
+      Documentation
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="/docs/getting-started/">Getting Started</a>
+      </li>
+<li>
+        <a href="/docs/createapp/">Create an App</a>
+      </li>
+      <li>
+        <a href="/docs/authorization/">Authorization</a>
+      </li>
+      <li>
+        <a href="/docs/basics/">Basics</a>
+      </li>
+      <li>
+       <a href="/docs/code/">Code Samples</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/docs/services/" class="dropdown-toggle">
+      API
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://developer.sky.blackbaud.com/docs/services/">Endpoint Reference</a>
+      </li>
+      <li>
+        <a href="/api/entity-reference/">Entity Reference</a>
+      </li>
+      <li>
+        <a href="https://developer.sky.blackbaud.com/products/">Products</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/developer/" class="dropdown-toggle">
+      Developer Account
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="https://developer.sky.blackbaud.com/developer/">My Profile</a>
+      </li>
+      <li>
+        <a href="https://developer.blackbaud.com/apps">My Applications</a>
+      </li>
+      <li>
+        <a href="https://developer.sky.blackbaud.com/developer/analytics/">Analytics</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="/support/changelog/" class="dropdown-toggle">
+      Support
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+       <li>
+        <a href="https://community.blackbaud.com/developer">Community</a>
+      </li>
+      <li>
+        <a href="/support/changelog/">Changelog</a>
+      </li>
+       <li>
+        <a href="/support/issues/">Issues</a>
+      </li>
+      <li>
+        <a href="/support/ideas/">Ideas</a>
+      </li>
+      <li>
+        <a href="/support/faq/">FAQ</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="https://skyapi.statuspage.io">Status</a>
+  </li>
+</ul>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+            </bb-navbar>
+          </div>
+
+        
+      
+
+      
+
+      
+      
+
+      
+        
+          
+
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        
+          
+
+<div class="row">
+  <div class="col-sm-3 content-secondary">
+    <div class="sidebar">
+      <ul class="nav nav-stacked nav-sidebar"><li class=""><a href="/docs/getting-started/">Getting Started</a></li><li class=""><a href="/docs/createapp/">Create an App</a></li><li class="current active"><a href="/docs/authorization/">Authorization</a><ul class="nav"><li class=""><a href="/docs/authorization/auth-code-flow/">Authorization Code Flow</a></li><li class=""><a href="/docs/authorization/implicit-flow/">Implicit Flow</a></li><li class="current active"><a href="/docs/authorization/common-auth-issues/">Common Authorization Issues</a><div class="headings"><ul class="nav"><li class="heading"><a href="#initiating-authorization" class="smooth-scroll">Initiating Authorization</a></li><li class="heading"><a href="#requesting-tokens" class="smooth-scroll">Requesting Tokens</a></li><li class="heading"><a href="#calling-the-sky-api" class="smooth-scroll">Calling the SKY API</a></li></ul></div></li></ul></li><li class=""><a href="/docs/basics/">Basics</a></li><li class=""><a href="/docs/code/">Code Samples</a></li><li class="visible-on-affix"><a href="#top" class="smooth-scroll"></a></li></ul>
+    </div>
+  </div>
+  <div class="col-sm-9 content-primary">
+    
+      
+<!-- STACHE MARKED -->
+<div class="pull-right partial-edit-header">
+    <a href="#disqus_thread" target="_self" class="edit-link btn btn-primary">
+        Comments
+    </a>
+</div><div class="pull-right partial-edit-header">
+    <a href="https://github.com/blackbaud/sky-api-docs/blob/develop/content/docs/authorization/common-auth-issues/index.md" target="_blank" class="edit-link btn btn-primary" rel="noopener noreferrer">
+        <i class="fa fa-pencil"></i> Edit in GitHub
+    </a>
+</div>
+
+<h1 id="common-authorization-issues">Common Authorization Issues</h1>
+<p>You may encounter one of the following common issues when initiating authorization, requesting access tokens, or calling the SKY API.</p>
+<h2 id="initiating-authorization">Initiating Authorization</h2>
+<p>Applications initiate the OAuth process by directing the user&apos;s browser to our <a href="https://oauth2.apim.blackbaud.com/authorization">Authorization</a> page with various parameters that identify the application and the type of authorization being requested.  </p>
+<p><bb-alert bb-alert-type="warning"><strong>Important!</strong> Pop up blockers may interfere with obtaining access tokens if the authorization page is launched in a separate window (as is done in the SKY API Console). Please enable pop ups when using the SKY API Console to obtain access tokens.</bb-alert></p>
+
+<h3 id="invalid-client_id">Invalid client_id</h3>
+<p>The <code>client_id</code> parameter is required and used to identify the application requesting authorization.  If omitted, the following error will be shown:</p>
+<p><img src="/assets/img/missing_client_id.png" alt="Invalid client_id" title="Invalid client_id"></p>
+<p>If an invalid <code>client_id</code> parameter is specified, the following error will be shown:</p>
+<p><img src="/assets/img/invalid_client_id.png" alt="Invalid client_id" title="Invalid client_id"></p>
+<p>To resolve these issues, ensure that the authorization URL includes the <code>client_id</code> parameter, which is displayed in the <strong>Application Credentials column</strong> of the <a href="https://developer.blackbaud.com/apps">My Applications</a> page. <strong>Application ID</strong> is the unique identifier for your application, and should be specified as the <code>client_id</code> parameter when initiating the authorization process.</p>
+<h3 id="invalid-redirect_uri">Invalid redirect_uri</h3>
+<p>The <code>redirect_uri</code> parameter is required and used to confirm the application&apos;s identity and communicate where to send the browser after the user provides consent.  If omitted, the following error will be shown:</p>
+<p><img src="/assets/img/missing_redirect_uri.png" alt="Invalid redirect_uri" title="Invalid redirect_uri"></p>
+<p>If an invalid or malformed <code>redirect_uri</code> parameter is specified, the following error will be shown:</p>
+<p><img src="/assets/img/malformed_redirect_uri.png" alt="Invalid redirect_uri" title="Invalid redirect_uri"></p>
+<p>If the value provided for the <code>redirect_uri</code> parameter does not match one of the values provided when the application was registered, the following error will be shown:</p>
+<p><img src="/assets/img/invalid_redirect_uri.png" alt="Invalid redirect_uri" title="Invalid redirect_uri"></p>
+<p>To resolve these issues, ensure that the value provided for the <code>redirect_uri</code> parameter is one of the whitelisted values that you specified when <a href="/docs/createapp/">registering your application</a>.  The value must match <em>exactly</em>, including capitalization, terminating slashes, etc.</p>
+<h3 id="invalid-response_type">Invalid response_type</h3>
+<p>The <code>response_type</code> parameter is required, and indicates the the type of authorization being requested by the application. The value must be set to <code>code</code> when using the <a href="/docs/authorization/auth-code-flow/">Authorization Code Flow</a> or <code>token</code> when using the <a href="/docs/authorization/implicit-flow/">Implicit Flow</a>.</p>
+<p>If the <code>response_type</code> parameter is omitted, the user&apos;s browser will be redirected to the specified <code>redirect_uri</code> location with an <code>error</code> query parameter of <code>invalid_request</code>.  If the value specified is invalid or unsupported, the <code>error</code> query parameter will be <code>unsupported_response_type</code>.</p>
+<h3 id="user-cannot-access-any-sky-api-enabled-products">User cannot access any SKY API enabled products</h3>
+<p>If the authenticated user cannot access any SKY API enabled Blackbaud products, the following error will be shown: </p>
+<p><img src="/assets/img/auth_no_tenants.png" alt="User cannot access any SKY API enabled products" title="User cannot access any SKY API enabled products"></p>
+<p>In order to provide consent for an application to access any Blackbaud data, the authenticating user must have access to a SKY API enabled Blackbaud product. This requirement allows SKY API to respect and enforce the user&apos;s security permissions. If the user does not have access, they should contact the organization administrator and request an invitation.</p>
+<h3 id="application-not-approved">Application not approved</h3>
+<p>Before an application can request authorization and make calls to the SKY API, an organization administrator must approve the application.  If the application has not been approved, the following error will be shown:</p>
+<p><img src="/assets/img/auth_application_not_activated.png" alt="Application not approved" title="Application not approved"></p>
+<p>Note that organization administrators can also remove an application when they no longer want it to have access to their Blackbaud data. For more information, see <a href="/docs/createapp/">Activate your application</a>.</p>
+<h3 id="user-denied-access">User denied access</h3>
+<p>During the OAuth process, the user can choose to deny consent to the application.  When this happens, the user&apos;s browser will be redirected to the specified <code>redirect_uri</code> location with an <code>error</code> query parameter of <code>access_denied</code> and an <code>error_message</code> query parameter value of <code>The user chose not to give your app access to their Blackbaud data.</code>.</p>
+<h3 id="other-parameters">Other parameters</h3>
+<p>Note that any query parameters not directly supported will be ignored during the OAuth process.  For more information on initiating the OAuth process, see <a href="/docs/authorization">Authorization</a>.</p>
+<h2 id="requesting-tokens">Requesting Tokens</h2>
+<p>Applications using the <a href="/docs/authorization/auth-code-flow/">Authorization Code Flow</a> will call the <code>/token</code> endpoint to exchange authorization codes for access tokens and to refresh access tokens when they expire.  Calls to the <code>/token</code> endpoint require authentication and a request body that describes the operation being performed.</p>
+<p>Error responses from the <code>/token</code> endpoint match the shape defined by <a href="https://tools.ietf.org/html/rfc6749#section-5.2">Section 5.2</a> of the OAuth 2.0 spec, and will be returned as a JSON object containing <code>error</code> and <code>error_description</code> properties:</p>
+<pre><code class="language-http">{
+    &quot;error&quot;: &quot;invalid_client&quot;,
+    &quot;error_description&quot;: &quot;The specified credentials were not valid.&quot;
+}</code></pre>
+
+<h3 id="invalid_client-error">invalid_client error</h3>
+<p>This error indicates that we were unable to retrieve and verify the application&apos;s credentials (application ID and secret) from either the authorization header or the request body. To resolve this, ensure that you are providing the application credentials as either base64-encoded values within the Authorization header (preferred), or as form-url-encoded values <code>client_id</code> and <code>client_secret</code> in the request body. </p>
+<p>
+<bb-alert bb-alert-type="info"><strong><em>Note:</em></strong> When specifying credentials using the <code>Authorization</code> header, the value must have the format: <code>Basic &lt;base64 encoded Application ID:Application secret&gt;</code>.  Make sure to include a space after the &quot;Basic&quot; prefix.</bb-alert>
+</p>
+
+<p>After you register an application, the credentials are displayed in the <strong>Application Credentials column</strong> of the <a href="https://developer.blackbaud.com/apps">My Applications</a> page. <strong>Application ID</strong> is the unique identifier for your application, and should be specified as the <code>client_id</code> parameter value.  Use the <strong>Application Secret</strong> as the <code>client_secret</code> parameter value.</p>
+<p>For more information, see step 4 of <a href="/docs/authorization/auth-code-flow/#step-4-mdash-request-tokens">Authorization Code Flow</a> documentation.</p>
+<p>Variations of this error condition can take the following forms:</p>
+<ul>
+<li><p>&quot;The required credentials were not supplied.&quot;</p>
+</li>
+<li><p>&quot;The required client_id parameter was not provided.&quot;</p>
+</li>
+<li><p>&quot;The specified credentials were not valid.&quot;</p>
+</li>
+<li><p>&quot;The value specified for the client_id parameter &apos;XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXX&apos; was not valid.&quot;</p>
+</li>
+</ul>
+<p>Ensure that the application&apos;s credentials were properly specified as either base64-encoded values within the Authorization header (preferred), or as form-url-encoded values <code>client_id</code> and <code>client_secret</code> in the request body. </p>
+<h3 id="invalid_redirect_uri-error">invalid_redirect_uri error</h3>
+<blockquote>
+<p>&quot;The specified value for the redirect_uri parameter &apos;xxxxxxx&apos; did not match any pre-registered values.&quot;</p>
+</blockquote>
+<p>The value provided for the <code>redirect_uri</code> field in the request body must be one of the whitelisted values that you specified when <a href="/docs/createapp/">registering your application</a>.  The value must match <em>exactly</em>, including capitalization, terminating slashes, etc.</p>
+<p>Note that within the <code>/token</code> endpoint this value is only used for validation purposes (no redirect actually happens).  The value must <em>exactly</em> match the value of the <code>redirect_uri</code> parameter that was specified when originally requesting the authorization code.</p>
+<h3 id="unsupported_grant_type-error">unsupported_grant_type error</h3>
+<blockquote>
+<p>&quot;unsupported_grant_type&quot; error</p>
+</blockquote>
+<p>When requesting an access token from the <code>/token</code> endpoint, you must pass an appropriate value for the <code>grant_type</code> request body parameter as per the OAuth 2.0 specification.  When initially exchanging an authorization code for an access token, the value specified should be <code>authorization_code</code>.  When refreshing an access token, the value specified should be <code>refresh_token</code>.  Check the spelling of the <code>grant_type</code> parameter name, and ensure that the value provided is supported. </p>
+<h3 id="invalid_grant-error">invalid_grant error</h3>
+<blockquote>
+<p>&quot;invalid_grant&quot; error</p>
+</blockquote>
+<p>This error can be returned for a variety of reasons when requesting an access token.</p>
+<p>For example, when <a href="/docs/authorization/auth-code-flow/#step-4--request-tokens">exchanging an authorization code</a> for an access token, you will see this error when providing an invalid, expired, or previously used authorization code. In this case, you must restart the authorization process and obtain a new authorization code from the <code>/authorization</code> page. The authorization codes expire in a short period of time (currently, 5 minutes) and are not reusable. Your application should exchange them for access tokens promptly.</p>
+<p>A <code>redirect_uri</code> that does not match the one used when making the <a href="/docs/authorization/auth-code-flow/#step-1--request-authorization">initial authorization</a> request can also cause this error. To resolve this, use the same <code>redirect_uri</code> in both operations.</p>
+<p>You may also see this when you <a href="/docs/authorization/auth-code-flow/#step-7--refresh-access-token">refresh an access token</a> if you provide an expired, revoked, or otherwise invalid refresh token.</p>
+<h2 id="calling-the-sky-api">Calling the SKY API</h2>
+<h3 id="invalid-subscription-key">invalid subscription key</h3>
+<blockquote>
+<p>&quot;Access denied due to invalid subscription key. Make sure to provide a valid key for an active subscription.&quot;</p>
+</blockquote>
+<p>When making calls to the SKY API, be sure to provide either your primary or secondary subscription key with the request.</p>
+<p>The subscription key represents a subscription to a specific SKY API product and is associated with your developer account. To get a subscription key, you&apos;ll need to sign up for a Blackbaud developer account and get an approved subscription. Once you have an approved subscription, you can view the subscription keys within your <a href="https://developer.sky.blackbaud.com/developer/" target="_blank" rel="noopener noreferrer">profile</a>.  The subscription key value is passed with each request to the SKY API via the  <code>Bb-Api-Subscription-Key</code> request header. See <a href="/docs/getting-started/" target="_blank" rel="noopener noreferrer">Getting Started</a> for instructions on how to obtain a subscription key and an example of using the subscription key in a call to the API.</p>
+<h3 id="missing-invalid-authorization-header">missing/invalid authorization header</h3>
+<blockquote>
+<p>&quot;The required Authorization header was missing or invalid, or the token has expired&quot;</p>
+</blockquote>
+<h4 id="missing-token">Missing Token</h4>
+<p>When making calls to the API, you need to provide an access token obtained using OAuth 2.0. The access token allows you to make requests to the SKY API on a behalf of a user. When calling the API, be sure to supply the <code>Authorization</code> request header with a value of <code>Bearer</code>, followed by a space and the <code>access_token</code> value.</p>
+<p>It&apos;s a common mistake to forget to prepend the <code>access_token</code> value with <code>Bearer</code>.  Be sure to include a space between <code>Bearer</code> and the <code>access_token</code> value.</p>
+<h5 id="sample-request-">Sample request:</h5>
+<pre><code class="language-http">GET https://api.sky.blackbaud.com/constituent/constituents/280 HTTP/1.1
+Host: api.sky.blackbaud.com
+Authorization: Bearer eyJ0eXAiOiJKV1...CTtP0CQ
+Bb-Api-Subscription-Key: 77f137116...480d633
+</code></pre>
+
+<h4 id="expired-token">Expired Token</h4>
+<p>The access token expires in 60 minutes.  With the <a href="/docs/authorization/auth-code-flow/">Authorization Code Flow</a>, each time you refresh your tokens, you&apos;ll get a new access and refresh token.  </p>
+<p>Refresh tokens will also expire, but after a much longer period of time (currently, 60 days). Using a sliding window, each time you exchange your refresh token for a new access token, we will issue a new refresh token as well. As long as your application connects to the SKY API at least once within the window, you will be able to continue to access the Blackbaud customer&apos;s data indefinitely (or until they deactivate your application).</p>
+<p>If your access token <em>and</em> refresh token have expired, the user will have to re-authenticate and consent.</p>
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//sky-api.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+</div>
+
+    
+  </div>
+</div>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+      
+
+      
+
+      
+        <div class="back-to-top" data-offset="220">
+  <i class="fa fa-angle-double-up"></i>
+</div>
+      
+
+      <div class="affix-stop">
+        
+
+        
+          
+
+            <div class="footer-site">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-6 col-sm-4">
+                    <h3>
+  <a href="https://developer.sky.blackbaud.com/">
+    SKY API
+  </a>
+</h3>
+                    <ul class="nav navbar-nav navbar-left">
+  <li>
+    <a href="https://developer.sky.blackbaud.com/">
+      Home
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/docs/getting-started/">
+      Documentation
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/docs/services/">
+      API
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="https://developer.sky.blackbaud.com/developer/">
+      Developer Account
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="dropdown">
+    <a href="/support/changelog/">
+      Support
+      <span class="caret"></span>
+    </a>
+  </li>
+  <li class="terms">
+    <a href="https://developer.sky.blackbaud.com/terms">
+      API Terms of Use
+    </a>
+  </li>
+</ul>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-sm-push-4">
+                    <ul class="list-inline social-icons">
+  <li>
+    <a href="http://twitter.com/blackbaud" target="_blank">
+      <i class="fa fa-twitter"></i>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.facebook.com/blackbaud" target="_blank">
+      <i class="fa fa-facebook"></i>
+    </a>
+  </li>
+  <li>
+    <a href="http://www.youtube.com/user/blackbaudinc" target="_blank">
+      <i class="fa fa-youtube"></i>
+    </a>
+  </li>
+</ul>
+                  </div>
+                  <div class="clearfix visible-xs-block"></div>
+                  <div class="col-sm-4 col-sm-pull-4">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          
+        
+
+        
+          
+            <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p>&copy; 2016 Blackbaud, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</div>
+          
+        
+      </div>
+
+      
+        <bb-omnibar></bb-omnibar>
+<bb-omnibar-search-results></bb-omnibar-search-results>
+      
+
+      
+        <script src="https://sky.blackbaudcdn.net/skyux/1.16.0-4/js/sky-bundle.min.js"></script>
+      
+
+      
+
+      <script src="/js/stache.min.js"></script>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+
+      
+        
+          <script src="/assets/js/scrollreveal.js"></script>
+        
+      
+        
+          <script src="/assets/js/custom.js"></script>
+        
+      
+        
+          <script src="/assets/js/angular-local-storage.min.js"></script>
+        
+      
+        
+          <script src="/assets/js/entity-reference/app.1.2.js"></script>
+        
+      
+
+      
+
+      
+
+      
+        
+          <script>
+            !function(e,a){"use strict";function n(){var e={};try{e.omnibar={enableHelp:!1,enableSearch:!0,serviceName:"SKY API",serviceNameLink:"https://developer.sky.blackbaud.com/",enableServiceNameLink:!0,url:"https://signin.blackbaud.com/omnibar.min.js",urlDev:"https://signin.blackbaud.com/omnibar.min.js",delegationUri:"https://developer.sky.blackbaud.com/signin/"},e.omnibarSearch={resultsBaseUri:"",resourceUrl:"/content.json",resultsTemplateUri:"/assets/vendor/bb-omnibar-search/templates/bb-omnibar-search.hbs",searchFormClass:"searchenabled",searchFormClassDev:"bb-omnibar-searchenabled",searchInputId:"omnibar_searchbox",searchResultsId:"bb-omnibar-search-results"}}catch(e){}return e}function r(e,a){e.$on("bbBeginWait",function(e,n){e.stopPropagation(),a.beginPageWait(n)}),e.$on("bbEndWait",function(e,n){e.stopPropagation(),a.endPageWait(n)})}r.$inject=["$rootScope","bbWait"],a.module("stache").constant("stacheConfig",n.call()).run(r),a.element(document).ready(function(){a.bootstrap(document,["stache"])})}(window,window.angular);
+          </script>
+        
+      
+
+      
+
+    </body>
+  </html>
+
